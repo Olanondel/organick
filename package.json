@@ -1,6 +1,10 @@
 {
   "name": "nuxt-3-app",
   "private": true,
+  "engines": {
+    "node": "^18",
+    "yarn": ">=1.22.19"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev --host",
