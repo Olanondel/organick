@@ -1,0 +1,108 @@
+* {
+  -webkit-tap-highlight-color: transparent;
+  min-width: 0;
+  min-height: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  &, &::before, &::after {
+    box-sizing: border-box;
+  }
+}
+
+[type="text"],
+[type="email"],
+[type="tel"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="url"],
+textarea {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  box-shadow: none;
+  appearance: none;
+  -moz-appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button,
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    appearance: none;
+  }
+
+  &::placeholder {
+    color: inherit;
+    opacity: 1;
+  }
+
+  &:focus {
+    &::placeholder {
+      opacity: 1;
+    }
+  }
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  display: block;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  color: inherit;
+  font: inherit;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+  text-align: inherit;
+
+  &:disabled {
+    pointer-events: none;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+svg {
+  display: block;
+}
+
+hr {
+  margin: 0;
+}
+
+img, picture {
+  display: block;
+}
+
+picture > img {
+  width: 100%;
+  height: 100%;
+  object-fit: inherit;
+  object-position: inherit;
+}

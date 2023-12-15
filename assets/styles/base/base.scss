@@ -1,0 +1,40 @@
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  // content height fix
+  height: -webkit-fill-available;
+}
+
+body {
+  font-family: $font-family-default;
+  font-size: #{$font-size-default}px;
+  font-weight: 400;
+  line-height: 1;
+
+  min-width: 320px;
+  background-color: $color-white;
+  color: $color-black;
+  overflow-y: scroll;
+
+  // content height fix
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
+}
+
+#__nuxt {
+  // content height fix
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.app {
+  // content height fix
+  flex-grow: 1;
+}

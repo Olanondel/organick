@@ -1,0 +1,28 @@
+@use 'sass:math';
+
+// Sizing in em units
+@function em($pixels, $context: $font-size-default) {
+  @return #{math.div($pixels, $context)}em;
+}
+@function sizeByVW($width, $context: $font-size-default) {
+  @return math.div(100vw, $width) * $context;
+}
+
+// Interaction states
+@mixin hover {
+  @media (hover: hover) { &:hover { @content; } }
+}
+@mixin hoverActiveFocus() {
+  @include hover { @content; }
+  &:active, &:focus-visible { @content; }
+}
+
+// Sizing
+@mixin box($size) { width: $size; height: $size; }
+
+// Scroll
+@mixin hideScroll {
+  -ms-overflow-style: none; // IE and Edge
+  scrollbar-width: none; // Firefox
+  &::-webkit-scrollbar { display: none; }
+}
