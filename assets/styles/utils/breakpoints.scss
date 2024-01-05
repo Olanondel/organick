@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 // Bootstrap breakpoints mixins
 @import 'bootstrap/scss/mixins/breakpoints';
 
@@ -9,18 +11,16 @@ $grid-breakpoints-plain: (
   xl: 1600,
   xxl: 1920,
 );
-
 $grid-breakpoints: (
-  xs: map-get($grid-breakpoints-plain, xs) + 0px,
-  sm: map-get($grid-breakpoints-plain, sm) + 0px,
-  md: map-get($grid-breakpoints-plain, md) + 0px,
-  lg: map-get($grid-breakpoints-plain, lg) + 0px,
-  xl: map-get($grid-breakpoints-plain, xl) + 0px,
-  xxl: map-get($grid-breakpoints-plain, xxl) + 0px,
+  xs: map.get($grid-breakpoints-plain, xs) * 1px,
+  sm: map.get($grid-breakpoints-plain, sm) * 1px,
+  md: map.get($grid-breakpoints-plain, md) * 1px,
+  lg: map.get($grid-breakpoints-plain, lg) * 1px,
+  xl: map.get($grid-breakpoints-plain, xl) * 1px,
+  xxl: map.get($grid-breakpoints-plain, xxl) * 1px,
 );
 
 // Examples:
-//
 // @include media-breakpoint-down(sm) {} 0-767.98
 // @include media-breakpoint-up(sm) {} 768-Infinity
 // @include media-breakpoint-between(sm, md) {} 768-1279.98

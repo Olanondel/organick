@@ -4,7 +4,8 @@
 @function em($pixels, $context: $font-size-default) {
   @return #{math.div($pixels, $context)}em;
 }
-@function sizeByVW($width, $context: $font-size-default) {
+
+@function size-by-vw($width, $context: $font-size-default) {
   @return math.div(100vw, $width) * $context;
 }
 
@@ -12,16 +13,18 @@
 @mixin hover {
   @media (hover: hover) { &:hover { @content; } }
 }
-@mixin hoverActiveFocus() {
-  @include hover { @content; }
+
+@mixin hover-active-focus() {
   &:active, &:focus-visible { @content; }
+
+  @include hover { @content; }
 }
 
 // Sizing
 @mixin box($size) { width: $size; height: $size; }
 
 // Scroll
-@mixin hideScroll {
+@mixin hide-scroll {
   -ms-overflow-style: none; // IE and Edge
   scrollbar-width: none; // Firefox
   &::-webkit-scrollbar { display: none; }

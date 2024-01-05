@@ -1,14 +1,14 @@
-@mixin font-face($font-family, $file-path, $weight: normal, $style: normal ) {
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
   @font-face {
     font-family: $font-family;
-    font-weight: $weight;
     font-style: $style;
-    //font-display: swap;
+    font-weight: $weight;
+    src: url('#{$file-path}.woff2') format('woff2');
     font-display: block;
 
-    src: url('#{$file-path}.woff2') format('woff2');
+    // font-display: swap;
   }
 }
 
 // Font Name
-//@include font-face($font-family-name-default, '#{$fonts-path}/font-name/400', 400, normal);
+// @include font-face($font-family-name-default, '#{$fonts-path}/font-name/400', 400, normal);
