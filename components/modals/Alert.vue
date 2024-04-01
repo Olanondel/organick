@@ -1,46 +1,35 @@
 <template>
   <VueFinalModal
+    v-slot="{ close }"
     class="modals-alert"
     overlay-class="modals-alert__overlay"
     content-class="modals-alert__content"
     overlay-transition="vfm-fade"
     content-transition="vfm-fade"
-    @update:model-value="updateModelValue"
   >
     Alert!
-    <button type="button" @click="updateModelValue(false)">Ok</button>
+    <button type="button" @click="close">Ok</button>
   </VueFinalModal>
 </template>
 
-<script>
+<script setup>
 import { VueFinalModal } from 'vue-final-modal';
-
-export default {
-  components: {
-    VueFinalModal,
-  },
-  emits: ['update:modelValue'],
-  methods: {
-    updateModelValue(value) {
-      this.$emit('update:modelValue', value);
-    },
-  },
-};
 </script>
 
 <style lang="scss">
+// not scoped!
 .modals-alert {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
   &__overlay {
     background-color: rgba($color-black, 0.5);
   }
 
   &__content {
-    background-color: $color-white;
     padding: 20px;
+    background-color: $color-white;
   }
 }
 </style>

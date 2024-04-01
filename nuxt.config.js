@@ -3,11 +3,12 @@ import { getFontsPreloadList } from './utils/helpers.js';
 const isDev = process.env.NODE_ENV === 'development';
 const serverUrl = process.env.SERVER_URL;
 const clientUrl = process.env.CLIENT_URL;
+const nuxtRobots = process.env.NUXT_ROBOTS;
 
-let nuxtRobots = process.env.NUXT_ROBOTS;
+let robotsRules = {};
 if (nuxtRobots) {
   try {
-    nuxtRobots = JSON.parse(nuxtRobots);
+    robotsRules = JSON.parse(nuxtRobots);
   } catch (error) {
     console.error('NUXT_ROBOTS parsing error:', error);
   }
@@ -62,7 +63,6 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxtjs/device',
     '@nuxtjs/robots',
-    '@nuxt/image',
     'nuxt-svgo',
     '@vue-final-modal/nuxt',
     '@vee-validate/nuxt',
@@ -70,11 +70,12 @@ export default defineNuxtConfig({
     // 'nuxt-delay-hydration',
   ],
   robots: {
-    rules: nuxtRobots,
+    rules: robotsRules,
   },
   svgo: {
-    // use icon: <SvgoIconPathIconName /> (folder: /assets/icons)
+    // use icon: <CIcon name="icon-path/icon-name"> or <SvgoIconPathIconName /> (folder: /assets/icons)
     defaultImport: 'component',
+    explicitImportsOnly: true,
   },
   veeValidate: {
     autoImports: true,

@@ -1,7 +1,7 @@
+// common
 export function minMax(value, min, max) {
   return Math.min(Math.max(value, min), max);
 }
-
 export function cloneObject(object) {
   return JSON.parse(JSON.stringify(object));
 }
@@ -52,11 +52,11 @@ export function getFontPreloadList({ path, weights }, baseUrl = '/') {
     crossorigin: true,
   }));
 }
-export function getFontsPreloadList(fontsList) {
+export function getFontsPreloadList(fontsList, baseUrl = '/') {
   return fontsList.reduce(
     (result, { path, weights }) => [
       ...result,
-      ...preloadFont({ path, weights }),
+      ...getFontPreloadList({ path, weights }, baseUrl),
     ],
     [],
   );

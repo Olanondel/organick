@@ -10,14 +10,8 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { ModalsContainer } from 'vue-final-modal';
-
-export default {
-  components: {
-    ModalsContainer,
-  },
-};
 </script>
 
 <style scoped lang="scss">

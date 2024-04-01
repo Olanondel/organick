@@ -2,44 +2,25 @@
   <div class="pages-index">
     Index page
 
-    <button type="button" @click="openAlertModal">Open alert modal</button>
+    <button type="button" @click="alertModal.open">Open alert modal</button>
 
-    <ClientOnly>
-      <button type="button" @click="toggleContent">Toggle content</button>
-      <Collapse :when="showContent">Toggleable content</Collapse>
-    </ClientOnly>
+    <button type="button" @click="toggleContent">Toggle content</button>
+    <Collapse :when="showContent">Toggleable content</Collapse>
   </div>
 </template>
 
-<script>
+<script setup>
 import { useModal } from 'vue-final-modal';
-import ModalsAlert from '@/components/modals/Alert.vue';
-
 import { Collapse } from 'vue-collapsed';
 
-export default {
-  components: {
-    Collapse,
-  },
-  setup() {
-    const alertModal = useModal({ component: ModalsAlert });
+import ModalsAlert from '@/components/modals/Alert.vue';
 
-    return { alertModal };
-  },
-  data() {
-    return {
-      showContent: false,
-    };
-  },
-  methods: {
-    openAlertModal() {
-      this.alertModal.open();
-    },
-    toggleContent() {
-      this.showContent = !this.showContent;
-    },
-  },
-};
+const alertModal = useModal({ component: ModalsAlert });
+
+const showContent = ref(false);
+function toggleContent() {
+  showContent.value = !showContent.value;
+}
 </script>
 
 <style scoped lang="scss">

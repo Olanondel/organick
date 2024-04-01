@@ -6,15 +6,13 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    className: {
-      type: String,
-      default: undefined,
-    },
+<script setup>
+defineProps({
+  className: {
+    type: String,
+    default: undefined,
   },
-};
+});
 </script>
 
 <style scoped lang="scss">
