@@ -24,6 +24,8 @@ const fontsToPreload = getFontsPreloadList([
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  imports: { autoImport: false }, // disable auto imports
+  components: { dirs: [] }, // disable auto imports
   runtimeConfig: {
     serverUrl,
     public: { isDev, clientUrl },

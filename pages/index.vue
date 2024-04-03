@@ -10,6 +10,8 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
+
 import { useModal } from 'vue-final-modal';
 import { Collapse } from 'vue-collapsed';
 

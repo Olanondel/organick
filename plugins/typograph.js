@@ -1,3 +1,5 @@
+import { defineNuxtPlugin } from 'nuxt/app';
+
 import Typograf from 'typograf';
 
 export default defineNuxtPlugin({

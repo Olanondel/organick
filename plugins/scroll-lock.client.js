@@ -1,3 +1,5 @@
+import { defineNuxtPlugin } from 'nuxt/app';
+
 import scrollLock from 'scroll-lock';
 const {
   disablePageScroll,
