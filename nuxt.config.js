@@ -30,7 +30,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'Nuxt 3 App',
+      title: 'Nuxt 3 Boilerplate',
       viewport: 'width=device-width, initial-scale=1, maximum-scale=5',
       htmlAttrs: { lang: 'en' },
       // meta: [{ name: 'theme-color', content: '#FFFFFF' }],
@@ -60,40 +60,23 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/eslint-module',
     '@pinia/nuxt',
-    '@vueuse/nuxt',
     '@nuxtjs/device',
     '@nuxtjs/robots',
     'nuxt-svgo',
-    '@vue-final-modal/nuxt',
-    '@vee-validate/nuxt',
     'nuxt-swiper',
     // 'nuxt-delay-hydration',
   ],
-  robots: {
-    rules: robotsRules,
-  },
+  eslint: { lintOnStart: false },
+  robots: { rules: robotsRules },
   svgo: {
     // use icon: <CIcon name="icon-path/icon-name"> or <SvgoIconPathIconName /> (folder: /assets/icons)
     defaultImport: 'component',
     explicitImportsOnly: true,
   },
-  veeValidate: {
-    autoImports: true,
-    componentNames: {
-      Form: 'VeeForm',
-      Field: 'VeeField',
-      FieldArray: 'VeeFieldArray',
-      ErrorMessage: 'VeeErrorMessage',
-    },
-  },
-  swiper: {
-    styleLang: 'scss',
-  },
+  swiper: { styleLang: 'scss' },
   // delayHydration: {
   //   debug: process.env.DELAY_HYDRATION_DEBUG,
   //   mode: 'mount',
   // },
-  experimental: {
-    inlineSSRStyles: false,
-  },
+  experimental: { inlineSSRStyles: false },
 });
