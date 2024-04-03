@@ -28,7 +28,14 @@ export default defineNuxtConfig({
   components: { dirs: [] }, // disable auto imports
   runtimeConfig: {
     serverUrl,
-    public: { isDev, clientUrl },
+    public: {
+      isDev,
+      clientUrl,
+      sentry: {
+        dns: process.env.SENTRY_DNS,
+        environment: process.env.SENTRY_ENVIRONMENT,
+      },
+    },
   },
   app: {
     head: {
