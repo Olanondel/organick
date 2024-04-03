@@ -43,8 +43,11 @@ export default defineNuxtConfig({
       ],
     },
   },
-  css: ['reset-css', '@/assets/styles/base/index.scss'],
-  components: ['@/components', { path: '@/components/common', prefix: 'C' }],
+  css: [
+    'reset-css',
+    'vue-final-modal/style.css',
+    '@/assets/styles/base/index.scss',
+  ],
   vite: {
     css: {
       preprocessorOptions: {

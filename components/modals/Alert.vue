@@ -6,6 +6,7 @@
     content-class="modals-alert__content"
     overlay-transition="vfm-fade"
     content-transition="vfm-fade"
+    :teleport-to="false"
   >
     Alert!
     <button type="button" @click="close">Ok</button>
