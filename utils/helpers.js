@@ -15,15 +15,25 @@ export function awaitRAF() {
 }
 
 // em font-sizing
-export function getBodyFz() {
-  const bodyStyle = window.getComputedStyle(document.body);
+export function getElementFz(element = document.body) {
+  if (typeof element === 'string') {
+    element = document.querySelector(element);
+  }
+
+  if (!element) return 0;
+
+  const bodyStyle = window.getComputedStyle(element);
   return parseFloat(bodyStyle.fontSize);
 }
-export function toResizedPx(pxValue) {
-  return (pxValue / 16) * getBodyFz();
+export function toResizedPx(pxValue, contextElement = document.body) {
+  return (pxValue / 16) * getElementFz(contextElement);
 }
-export function toResizedEm(pxValue, pxContext) {
-  return pxValue / (pxContext || getBodyFz());
+export function toResizedEm(
+  pxValue,
+  pxContext,
+  contextElement = document.body,
+) {
+  return pxValue / (pxContext || getElementFz(contextElement));
 }
 
 // preload images
