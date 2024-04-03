@@ -1,3 +1,5 @@
+import { defineNuxtConfig } from 'nuxt/config';
+
 import { getFontsPreloadList } from './utils/helpers.js';
 
 const isDev = process.env.NODE_ENV === 'development';
@@ -79,6 +81,7 @@ export default defineNuxtConfig({
     // 'nuxt-delay-hydration',
   ],
   eslint: { lintOnStart: false },
+  pinia: { storesDirs: [] }, // disable auto imports
   robots: { rules: robotsRules },
   svgo: {
     // use icon: <CIcon name="icon-path/icon-name"> or <SvgoIconPathIconName /> (folder: /assets/icons)
