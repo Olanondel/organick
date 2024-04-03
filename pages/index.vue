@@ -15,7 +15,7 @@ import { ref } from 'vue';
 import { useModal } from 'vue-final-modal';
 import { Collapse } from 'vue-collapsed';
 
-import ModalsAlert from '@/components/modals/Alert.vue';
+import ModalsAlert from '@/components/modals/ModalsAlert.vue';
 
 const alertModal = useModal({ component: ModalsAlert });
 
