@@ -1,3 +1,5 @@
+import { useSeoMeta } from 'nuxt/app';
+
 export const useSeo = ({ title, description, image }) => {
   useSeoMeta({
     title: title || '',

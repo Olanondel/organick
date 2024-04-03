@@ -1,3 +1,5 @@
+import { useBreakpoints } from '@vueuse/core';
+
 export const useCustomBreakpoints = () => {
   return useBreakpoints({
     xs: 375,
