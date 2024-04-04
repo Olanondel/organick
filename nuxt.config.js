@@ -1,6 +1,6 @@
 import { defineNuxtConfig } from 'nuxt/config';
 
-import { getFontsPreloadList } from './utils/helpers.js';
+// import { getFontsPreloadList } from './utils/helpers.js';
 
 const isDev = process.env.NODE_ENV === 'development';
 const serverUrl = process.env.SERVER_URL;
@@ -16,12 +16,12 @@ if (nuxtRobots) {
   }
 }
 
-const fontsToPreload = getFontsPreloadList([
-  // {
-  //   path: 'font-name/FontName-',
-  //   weights: ['Light', 'Bold'],
-  // },
-]);
+// const fontsToPreload = getFontsPreloadList([
+//   {
+//     path: 'font-name/FontName-',
+//     weights: ['Light', 'Bold'],
+//   },
+// ]);
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -47,8 +47,7 @@ export default defineNuxtConfig({
       // meta: [{ name: 'theme-color', content: '#FFFFFF' }],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        // preload fonts
-        ...fontsToPreload,
+        // ...fontsToPreload,
       ],
     },
   },
@@ -60,15 +59,15 @@ export default defineNuxtConfig({
   vite: {
     css: {
       preprocessorOptions: {
-        scss: { additionalData: '@import "@/assets/styles/utils";' },
+        scss: { additionalData: '@use "@/assets/styles/utils" as *;' },
       },
     },
   },
   routeRules: {
-    // proxy
+    // Proxy
     '/api/**': { proxy: `${clientUrl}api/**` },
     '/storage/**': { proxy: `${clientUrl}storage/**` },
-    // cache
+    // Cache
     // '/**': { headers: { 'Cache-Control': 'max-age=31536000' } },
   },
   modules: [
@@ -82,14 +81,7 @@ export default defineNuxtConfig({
   eslint: { lintOnStart: false },
   pinia: { storesDirs: [] }, // disable auto imports
   robots: { rules: robotsRules },
-  svgo: {
-    // use icon: <CIcon name="icon-path/icon-name"> or <SvgoIconPathIconName /> (folder: /assets/icons)
-    defaultImport: 'component',
-    explicitImportsOnly: true,
-  },
-  // delayHydration: {
-  //   debug: process.env.DELAY_HYDRATION_DEBUG,
-  //   mode: 'mount',
-  // },
+  svgo: { defaultImport: 'component', explicitImportsOnly: true },
+  // delayHydration: { debug: process.env.DELAY_HYDRATION_DEBUG, mode: 'mount' },
   experimental: { inlineSSRStyles: false },
 });

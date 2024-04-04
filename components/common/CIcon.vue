@@ -1,5 +1,8 @@
 <script setup>
 /**
+ * Icons folder: '/assets/icons'
+ * @example
+ * <CIcon name="icon-path/icon-name">
  * @see https://github.com/cpsoinos/nuxt-svgo
  */
 import { computed } from 'vue';
