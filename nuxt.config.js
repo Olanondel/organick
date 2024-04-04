@@ -77,7 +77,6 @@ export default defineNuxtConfig({
     '@nuxtjs/device',
     '@nuxtjs/robots',
     'nuxt-svgo',
-    'nuxt-swiper',
     // 'nuxt-delay-hydration',
   ],
   eslint: { lintOnStart: false },
@@ -88,7 +87,6 @@ export default defineNuxtConfig({
     defaultImport: 'component',
     explicitImportsOnly: true,
   },
-  swiper: { styleLang: 'scss' },
   // delayHydration: {
   //   debug: process.env.DELAY_HYDRATION_DEBUG,
   //   mode: 'mount',
