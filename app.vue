@@ -1,5 +1,5 @@
 <template>
-  <div class="app">
+  <div id="app" class="app">
     App
 
     <NuxtLayout v-slot="{ className }" class="app__layout">

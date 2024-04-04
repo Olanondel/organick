@@ -9,8 +9,8 @@ body {
   display: flex;
   flex-direction: column;
   min-width: 320px;
-  min-height: stretch;
   min-height: 100vh;
+  min-height: stretch;
   overflow-y: scroll;
   font-family: $font-family-default;
   font-size: #{$font-size-default}px;
@@ -26,6 +26,6 @@ body {
   flex-grow: 1;
 }
 
-.app {
+#app {
   flex-grow: 1;
 }
