@@ -14,11 +14,16 @@
 </template>
 
 <script setup>
+/**
+ * @see https://vue-final-modal.org/
+ */
 import { VueFinalModal } from 'vue-final-modal';
 </script>
 
 <style lang="scss">
-// not scoped!
+/**
+<VueFinalModal> doesn't have scoped id
+ */
 .modals-alert {
   display: flex;
   align-items: center;

@@ -1,5 +1,13 @@
 import { useBreakpoints } from '@vueuse/core';
 
+/**
+ * Get css bootstrap-like breakpoints in js
+ * @returns {object} breakpoint object with methods: greaterOrEqual, smallerOrEqual, greater, smaller, between, isGreater, isGreaterOrEqual, isSmaller, isSmallerOrEqual, isInBetween
+ * @example
+ * const breakpoint = useCustomBreakpoints();
+ * const isSmBreakpoint = breakpoint.smaller('sm');
+ * @see https://vueuse.org/useBreakpoints
+ */
 export const useCustomBreakpoints = () => {
   return useBreakpoints({
     xs: 375,

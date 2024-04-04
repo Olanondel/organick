@@ -8,9 +8,13 @@ const {
   getPageScrollBarWidth,
 } = scrollLock;
 
-// Fill gap for fixed elements: [data-scroll-lock-fill-gap]
-// Allow scroll for elements: [data-scroll-lock-scrollable]
+// TODO: composable
 
+/**
+ * Scroll lock integration
+ * @description Fill gap for fixed elements: [data-scroll-lock-fill-gap]
+ * @description Allow scroll for elements: [data-scroll-lock-scrollable]
+ */
 export default defineNuxtPlugin({
   parallel: true,
   setup() {

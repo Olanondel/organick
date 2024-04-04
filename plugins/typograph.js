@@ -2,6 +2,10 @@ import { defineNuxtPlugin } from 'nuxt/app';
 
 import Typograf from 'typograf';
 
+/**
+ * Typograf integration
+ * @description Fix word wraps and other common typos
+ */
 export default defineNuxtPlugin({
   parallel: true,
   setup() {

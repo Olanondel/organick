@@ -1,9 +1,19 @@
-import { ref, onMounted, watch, isRef } from 'vue';
+import { ref, isRef, onMounted } from 'vue';
 import { useEventListener } from '@vueuse/core';
 
 import { toResizedPx } from '@/utils/helpers';
 
-export const useResizedPx = (pxValue = 0, contextElement = '#app') => {
+/**
+ * Get reactive px value regarding element font-size
+ * @param {number} pxValue desired px value
+ * @param {Ref<HTMLElement>|HTMLElement|string} contextElement reference element or selector
+ * @returns {Ref<UnwrapRef<number>>} reactive calculated px value
+ * @example
+ * const contextElementRef = ref(null);
+ * const resizedPx = useResizedPx(10, contextElementRef);
+ * onMounted(() => console.log(resizedPx.value));
+ */
+export const useResizedPx = (pxValue = 0, contextElement) => {
   const resizedPxValue = ref(pxValue);
 
   const isElementRef = isRef(contextElement);
@@ -18,10 +28,6 @@ export const useResizedPx = (pxValue = 0, contextElement = '#app') => {
     setResizedPxValue();
     useEventListener(window, 'resize', setResizedPxValue);
   });
-
-  if (isElementRef) {
-    watch(contextElement, setResizedPxValue);
-  }
 
   return resizedPxValue;
 };

@@ -1,4 +1,7 @@
 <script setup>
+/**
+ * @see https://github.com/cpsoinos/nuxt-svgo
+ */
 import { computed } from 'vue';
 
 const props = defineProps({

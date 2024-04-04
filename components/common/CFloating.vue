@@ -1,4 +1,7 @@
 <script setup>
+/**
+ * @see https://floating-ui.com/docs/vue
+ */
 import {
   useFloating,
   offset,
