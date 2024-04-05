@@ -8,7 +8,9 @@ function handle(to, from, savedPosition) {
   return { top: 0 };
 }
 
-// https://router.vuejs.org/api/interfaces/routeroptions.html
+/**
+ * @see https://router.vuejs.org/api/interfaces/routeroptions.html
+ */
 export default {
   scrollBehavior(to, from, savedPosition) {
     if (to.path === from?.path) {
