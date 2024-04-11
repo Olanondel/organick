@@ -12,16 +12,16 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
   ```
 - **/styles** - SCSS styles & tools
 - **/base** - SCSS global styles:
-  - `reset.scss` - css reset (additional to 'reset-css')
+  - `reset.scss` - CSS reset (additional to 'reset-css')
   - `fonts.scss` - fonts setup (font-faces)
   - `vendors.scss` - vendor styles (for global libraries)
-  - `transitions.scss` - vue transitions (https://vuejs.org/guide/built-ins/transition)
+  - `transitions.scss` - [Vue transitions](https://vuejs.org/guide/built-ins/transition)
   - `base.scss` - html, body, base blocks styles
   - `blocks/index.scss` - global blocks (.container etc.)
 - **/utils** - SCSS utils (variables, mixins, functions etc.):
-  - `variables.scss` - SCSS variables (https://sass-lang.com/documentation/variables/)
-  - `utils.scss` - SCSS mixins (https://sass-lang.com/documentation/at-rules/mixin/) & functions (https://sass-lang.com/documentation/at-rules/function/)
-  - `breakpoints.scss` - Bootstrap breakpoint mixins (https://getbootstrap.com/docs/5.3/layout/breakpoints/)
+  - `variables.scss` - [SCSS variables](https://sass-lang.com/documentation/variables/)
+  - `utils.scss` - [SCSS mixins](https://sass-lang.com/documentation/at-rules/mixin/) & [functions](https://sass-lang.com/documentation/at-rules/function/)
+  - `breakpoints.scss` - [Bootstrap breakpoint mixins](https://getbootstrap.com/docs/5.3/layout/breakpoints/)
 - **[/components](https://nuxt.com/docs/guide/directory-structure/components)** - Vue 3 components
   - **/common** - universal components closed to modifying
   - **/layout** - layout components (Header, Footer etc.)
@@ -47,7 +47,7 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 
 ## SCSS basics
 
-**[BEM methodology](https://ru.bem.info/methodology/css/)** basic usage in vue components:
+**[BEM methodology](https://ru.bem.info/methodology/css/)** basic usage in Vue components:
 
 ```vue
 <style scoped lang="scss">
@@ -109,7 +109,7 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 - **[lodash](https://lodash.com/)** - Lodash util functions
 - **[pinia](https://pinia.vuejs.org/)** - Pinia store for Vue
 - **[qs](https://github.com/ljharb/qs)** - querystring parsing and stringifying
-- **[reset-css](https://github.com/shannonmoeller/reset-css)** - base css reset
+- **[reset-css](https://github.com/shannonmoeller/reset-css)** - base CSS reset
 - **[scroll-lock](https://github.com/FL3NKEY/scroll-lock)** - js scroll lock
 - **[swiper](https://swiperjs.com/)** - mobile touch slider
 - **[typograf](https://github.com/typograf/typograf)** - grammar helper
