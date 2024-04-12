@@ -1,7 +1,7 @@
 @use 'sass:map';
 
 // Bootstrap breakpoint mixins
-@use 'bootstrap/scss/mixins/breakpoints';
+@import 'bootstrap/scss/mixins/breakpoints';
 
 $grid-breakpoints-plain: (
   xs: 375,
