@@ -10,8 +10,8 @@ let fetchInstance;
  * @description Use store actions in useAsyncData
  * @description Provide SERVER_URL and CLIENT_URL env variables
  * @param {string} url request url after api prefix
- * @param {object} options request options (query, body, headers etc.)
- * @param {string} apiVersion api url version prefix e.g. 'v1'
+ * @param {object} [options] request options (query, body, headers etc.)
+ * @param {string} [apiVersion] api url version prefix e.g. 'v1'
  * @returns {Promise<any>} request promise
  * @example
  * useRequest('/route').then((data) => console.log(data));

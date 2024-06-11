@@ -6,14 +6,14 @@ import { toResizedPx } from '@/utils/helpers';
 /**
  * Get reactive px value regarding element font-size
  * @param {number} pxValue desired px value
- * @param {Ref<HTMLElement>|HTMLElement|string} contextElement reference element or selector
+ * @param {Ref<HTMLElement>|HTMLElement|string} [contextElement] reference element or selector
  * @returns {Ref<UnwrapRef<number>>} reactive calculated px value
  * @example
  * const contextElementRef = ref(null);
  * const resizedPx = useResizedPx(10, contextElementRef);
  * onMounted(() => console.log(resizedPx.value));
  */
-export const useResizedPx = (pxValue = 0, contextElement) => {
+export const useResizedPx = (pxValue, contextElement) => {
   const resizedPxValue = ref(pxValue);
 
   const isElementRef = isRef(contextElement);

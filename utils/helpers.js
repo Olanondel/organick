@@ -6,7 +6,7 @@
  * @param {number} max max boundary
  * @returns {number} calculated value
  * @example
- * minMax(15, 5, 10) // returns 10 (max boundary)
+ * minMax(15, 5, 10); // returns 10 (max boundary)
  */
 export function minMax(value, min, max) {
   return Math.min(Math.max(value, min), max);
@@ -17,6 +17,7 @@ export function minMax(value, min, max) {
  * @param {object} object object to clone
  * @returns {any} cloned object
  * @example
+ * const clonedObject = cloneObject(originalObject);
  */
 export function cloneObject(object) {
   return JSON.parse(JSON.stringify(object));
@@ -25,9 +26,10 @@ export function cloneObject(object) {
 // promise-based utils
 /**
  * Await timeout
- * @param {number} duration timeout duration
+ * @param {number} [duration] timeout duration
  * @returns {Promise<void>} timeout promise
- * @example await awaitTimeout(100);
+ * @example
+ * await awaitTimeout(100);
  */
 export function awaitTimeout(duration = 0) {
   return new Promise((resolve) => setTimeout(resolve, duration));
@@ -36,7 +38,8 @@ export function awaitTimeout(duration = 0) {
 /**
  * Await request animation frame
  * @returns {Promise<void>} request animation frame promise
- * @example await awaitRAF();
+ * @example
+ * await awaitRAF();
  */
 export function awaitRAF() {
   return new Promise((resolve) => requestAnimationFrame(resolve));
@@ -45,7 +48,7 @@ export function awaitRAF() {
 // em font-sizing
 /**
  * Get element font size
- * @param {HTMLElement|string} element reference element or selector
+ * @param {HTMLElement|string} [element] reference element or selector
  * @returns {number} element font-size
  */
 export function getElementFz(element = document.body) {
@@ -62,7 +65,7 @@ export function getElementFz(element = document.body) {
 /**
  * Get px value regarding element font-size
  * @param {number} pxValue desired px value
- * @param {HTMLElement|string} contextElement reference element or selector
+ * @param {HTMLElement|string} [contextElement] reference element or selector
  * @returns {number} calculated px value
  */
 export function toResizedPx(pxValue, contextElement = document.body) {
@@ -72,7 +75,7 @@ export function toResizedPx(pxValue, contextElement = document.body) {
 /**
  * Get em value regarding element font-size
  * @param {number} pxValue desired px value
- * @param {number} pxContext px context
+ * @param {number} [pxContext] px context
  * @returns {number} calculated px value
  */
 export function toResizedEm(pxValue, pxContext = 16) {
@@ -126,8 +129,10 @@ export function getFontPreloadList({ path, weights }, baseUrl = '/') {
 
 /**
  *
- * @param {{ path: string, weights: string }} fontsList font params list
- * @param {string} baseUrl site base url
+ * @param {object} fontsList font params list
+ * @param {string} fontsList.path font path
+ * @param {number[]} fontsList.weights font path
+ * @param {string} [baseUrl] site base url
  * @returns {{rel: string, href: string, as: string, type: string, crossorigin: true}[]} fonts preload list
  */
 export function getFontsPreloadList(fontsList, baseUrl = '/') {
