@@ -85,6 +85,7 @@ export default defineNuxtConfig({
     },
     plugins: vitePlugins,
   },
+  sourcemap: true,
   routeRules: {
     // Proxy
     '/api/**': { proxy: `${clientUrl}api/**` },
