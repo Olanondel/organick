@@ -1,5 +1,3 @@
-import { defineNuxtPlugin } from 'nuxt/app';
-
 /**
  * Make initial requests for common data
  * @description Renamed from 'initial-data.server.js' due to plugin not start in pages with routeRules: 'ssr: false'

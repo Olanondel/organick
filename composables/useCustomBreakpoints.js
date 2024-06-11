@@ -1,5 +1,3 @@
-import { useBreakpoints } from '@vueuse/core';
-
 /**
  * Get css bootstrap-like breakpoints in js
  * @returns {{greaterOrEqual: function, smallerOrEqual: function, greater: function, smaller: function, between: function, isGreater: function, isGreaterOrEqual: function, isSmaller: function, isSmallerOrEqual: function, isInBetween: function}} breakpoint methods object

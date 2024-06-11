@@ -5,7 +5,6 @@
  * <CIcon name="icon-path/icon-name">
  * @see https://github.com/cpsoinos/nuxt-svgo
  */
-import { computed } from 'vue';
 
 const props = defineProps({
   name: {

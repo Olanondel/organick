@@ -1,5 +1,3 @@
-import { defineNuxtConfig } from 'nuxt/config';
-
 import { sentryVitePlugin } from '@sentry/vite-plugin';
 // import { getFontsPreloadList } from './utils/helpers.js';
 // import imagesPrerender from './config/images-prerender';
@@ -47,8 +45,7 @@ if (!isDev) {
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  imports: { autoImport: false }, // disable auto imports
-  components: { dirs: [] }, // disable auto imports
+  components: ['@/components', { path: '@/components/common', prefix: 'C' }],
   runtimeConfig: {
     serverUrl,
     public: {
@@ -105,12 +102,23 @@ export default defineNuxtConfig({
     // '@nuxt/image',
     'nuxt-svgo',
     // 'nuxt-delay-hydration',
+    '@vueuse/nuxt',
+    '@vee-validate/nuxt',
+    '@vue-final-modal/nuxt',
   ],
   eslint: { lintOnStart: false },
-  pinia: { storesDirs: [] }, // disable auto imports
   robots: { rules: robotsRules },
   svgo: { defaultImport: 'component', explicitImportsOnly: true },
   // delayHydration: { debug: process.env.DELAY_HYDRATION_DEBUG, mode: 'mount' },
+  veeValidate: {
+    autoImports: true,
+    componentNames: {
+      Form: 'VeeForm',
+      Field: 'VeeField',
+      FieldArray: 'VeeFieldArray',
+      ErrorMessage: 'VeeErrorMessage',
+    },
+  },
   features: { inlineStyles: false },
   // nitro: { prerender: { routes: imagesPrerender } },
 });

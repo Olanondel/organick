@@ -1,5 +1,3 @@
-import { defineNuxtPlugin, useRuntimeConfig, useRouter } from 'nuxt/app';
-
 import * as Sentry from '@sentry/vue';
 
 /**
