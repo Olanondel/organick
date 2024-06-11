@@ -1,15 +1,21 @@
 {
   "name": "nuxt-3-boilerplate",
-  "version": "1.0.0",
   "private": true,
+  "version": "1.0.0",
+  "boilerplateVersion": "1.0.2",
+  "engines": {
+    "node": ">=18 <21",
+    "yarn": ">=1.22.19 <2"
+  },
+  "packageManager": "yarn@1.22.19",
   "scripts": {
     "build": "nuxt build",
-    "build & preview": "nuxt build && nuxt preview",
     "dev": "nuxt dev --host",
+    "prod": "node .output/server/index.mjs",
     "generate": "nuxt generate",
-    "postinstall": "nuxt prepare",
     "preview": "nuxt preview",
-    "prod": "node .output/server/index.mjs"
+    "build & preview": "nuxt build && nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "resolutions": {
     "string-width": "4.2.3"
@@ -56,11 +62,5 @@
     "stylelint-config-standard-scss": "^13.1.0",
     "stylelint-order": "^6.0.4",
     "stylelint-scss": "^6.2.1"
-  },
-  "packageManager": "yarn@1.22.19",
-  "engines": {
-    "node": ">=18 <21",
-    "yarn": ">=1.22.19 <2"
-  },
-  "boilerplateVersion": "1.0.2"
+  }
 }
