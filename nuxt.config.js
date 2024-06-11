@@ -1,6 +1,7 @@
 import { defineNuxtConfig } from 'nuxt/config';
 
 // import { getFontsPreloadList } from './utils/helpers.js';
+// import imagesPrerender from './config/images-prerender';
 
 const isDev = process.env.NODE_ENV === 'development';
 const serverUrl = process.env.SERVER_URL;
@@ -98,6 +99,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/device',
     '@nuxtjs/robots',
+    // '@nuxt/image',
     'nuxt-svgo',
     // 'nuxt-delay-hydration',
   ],
@@ -107,4 +109,5 @@ export default defineNuxtConfig({
   svgo: { defaultImport: 'component', explicitImportsOnly: true },
   // delayHydration: { debug: process.env.DELAY_HYDRATION_DEBUG, mode: 'mount' },
   features: { inlineStyles: false },
+  // nitro: { prerender: { routes: imagesPrerender } },
 });
