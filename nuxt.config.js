@@ -96,7 +96,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/eslint-module',
     '@pinia/nuxt',
-    '@nuxtjs/device',
+    // '@nuxtjs/device',
     '@nuxtjs/robots',
     'nuxt-svgo',
     // 'nuxt-delay-hydration',
