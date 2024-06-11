@@ -97,7 +97,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/eslint-module',
     '@pinia/nuxt',
-    '@nuxtjs/device',
+    // '@nuxtjs/device',
     '@nuxtjs/robots',
     // '@nuxt/image',
     'nuxt-svgo',
