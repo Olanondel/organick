@@ -99,6 +99,7 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 
 ## Npm modules:
 
+- **[@nuxt/image](https://image.nuxt.com/)** - image optimization
 - **[@nuxtjs/device](https://github.com/nuxt-modules/device)** - device detection by user-agent
 - **[@nuxtjs/robots](https://github.com/nuxt-modules/robots)** - robots.txt generator
 - **[@pinia/nuxt](https://pinia.vuejs.org/ssr/nuxt.html)** - Pinia store for Nuxt
@@ -107,6 +108,8 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 - **[@vueuse/core](https://vueuse.org/)** - VueUse util composables
 - **[bootstrap](https://getbootstrap.com/)** - Bootstrap for [breakpoint mixins](https://getbootstrap.com/docs/5.3/layout/breakpoints/)
 - **[lodash](https://lodash.com/)** - Lodash util functions
+- **[nuxt-delay-hydration](https://github.com/harlan-zw/nuxt-delay-hydration)** - delay client js hydration for pagespeed
+- **[nuxt-svgo](https://nuxt.com/modules/nuxt-svgo)** - svg files as Vue components
 - **[pinia](https://pinia.vuejs.org/)** - Pinia store for Vue
 - **[qs](https://github.com/ljharb/qs)** - querystring parsing and stringifying
 - **[reset-css](https://github.com/shannonmoeller/reset-css)** - base CSS reset

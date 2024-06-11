@@ -15,7 +15,7 @@ const scripts = {
 };
 
 /**
- *
+ * Add metric on page
  * @param metricName metric name from 'scripts' object above
  * @param metricId metric unique id
  */
