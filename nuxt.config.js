@@ -104,7 +104,6 @@ export default defineNuxtConfig({
     // 'nuxt-delay-hydration',
     '@vueuse/nuxt',
     '@vee-validate/nuxt',
-    '@vue-final-modal/nuxt',
   ],
   eslint: { lintOnStart: false },
   robots: { rules: robotsRules },

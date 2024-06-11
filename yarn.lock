@@ -2132,14 +2132,6 @@
   resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-5.0.5.tgz#e3dc11e427d4b818b7e3202766ad156e3d5e2eaa"
   integrity sha512-LOjm7XeIimLBZyzinBQ6OSm3UBCNVCpLkxGC0oWmm2YPzVZoxMsdvNVimLTBzpAnR9hl/yn1SHGuRfe6/Td9rQ==
 
-"@vue-final-modal/nuxt@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@vue-final-modal/nuxt/-/nuxt-1.0.3.tgz#5c00ed2b6c6160140e74571c6ef126757f831dbc"
-  integrity sha512-I8YTvrBB93mLLV51Kn3BhlX5saAPqE4jz3Zb9jBm3wwMkvBkEtw3PwXq9kiGb+rNRS2v9EOL2FmhWWim++Mmvg==
-  dependencies:
-    "@nuxt/kit" "^3.8.2"
-    vue-final-modal "^4.5.0"
-
 "@vue-macros/common@^1.8.0":
   version "1.10.4"
   resolved "https://registry.yarnpkg.com/@vue-macros/common/-/common-1.10.4.tgz#cfe8a24026a1f239d1942d720063993c019250d0"
@@ -7841,7 +7833,7 @@ vue-eslint-parser@^9.4.2:
     lodash "^4.17.21"
     semver "^7.3.6"
 
-vue-final-modal@^4.5.0, vue-final-modal@^4.5.4:
+vue-final-modal@^4.5.4:
   version "4.5.4"
   resolved "https://registry.yarnpkg.com/vue-final-modal/-/vue-final-modal-4.5.4.tgz#9c71522dc0da7753a83d90404c8759934520f513"
   integrity sha512-wYunoN89Ago2d6p/hevyo4KSfar1HxScllS6FaHujCGyx69fsb40YPGzN17bk9K68daYAgrJ1inxv+fvhIGv5A==

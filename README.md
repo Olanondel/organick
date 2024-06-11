@@ -6,22 +6,22 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 
 - **[/app](https://nuxt.com/docs/guide/going-further/custom-routing#using-approuteroptions)** - router.options.js
 - **[/assets](https://nuxt.com/docs/guide/directory-structure/assets)** - files for build tool processing
-- **/icons** - svg icons to use by `CIcon` component. Icons can be folded. Usage:
-  ```vue
-  <CIcon name="icon-path/icon-name" />
-  ```
-- **/styles** - SCSS styles & tools
-- **/base** - SCSS global styles:
-  - `reset.scss` - CSS reset (additional to 'reset-css')
-  - `fonts.scss` - fonts setup (font-faces)
-  - `vendors.scss` - vendor styles (for global libraries)
-  - `transitions.scss` - [Vue transitions](https://vuejs.org/guide/built-ins/transition)
-  - `base.scss` - html, body, base blocks styles
-  - `blocks/index.scss` - global blocks (.container etc.)
-- **/utils** - SCSS utils (variables, mixins, functions etc.):
-  - `variables.scss` - [SCSS variables](https://sass-lang.com/documentation/variables/)
-  - `utils.scss` - [SCSS mixins](https://sass-lang.com/documentation/at-rules/mixin/) & [functions](https://sass-lang.com/documentation/at-rules/function/)
-  - `breakpoints.scss` - [Bootstrap breakpoint mixins](https://getbootstrap.com/docs/5.3/layout/breakpoints/)
+  - **/icons** - svg icons to use by `CIcon` component. Icons can be folded. Usage:
+    ```vue
+    <CIcon name="icon-path/icon-name" />
+    ```
+  - **/styles** - SCSS styles & tools
+    - **/base** - SCSS global styles:
+      - `reset.scss` - CSS reset (additional to 'reset-css')
+      - `fonts.scss` - fonts setup (font-faces)
+      - `vendors.scss` - vendor styles (for global libraries)
+      - `transitions.scss` - [Vue transitions](https://vuejs.org/guide/built-ins/transition)
+      - `base.scss` - html, body, base blocks styles
+      - `blocks/index.scss` - global blocks (.container etc.)
+    - **/utils** - SCSS utils (variables, mixins, functions etc.):
+      - `variables.scss` - [SCSS variables](https://sass-lang.com/documentation/variables/)
+      - `utils.scss` - [SCSS mixins](https://sass-lang.com/documentation/at-rules/mixin/) & [functions](https://sass-lang.com/documentation/at-rules/function/)
+      - `breakpoints.scss` - [Bootstrap breakpoint mixins](https://getbootstrap.com/docs/5.3/layout/breakpoints/)
 - **[/components](https://nuxt.com/docs/guide/directory-structure/components)** - Vue 3 components
   - **/common** - universal components closed to modifying
   - **/layout** - layout components (Header, Footer etc.)
@@ -101,10 +101,10 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 
 - **[@nuxt/image](https://image.nuxt.com/)** - image optimization
 - **[@nuxtjs/device](https://github.com/nuxt-modules/device)** - device detection by user-agent
+- **[@nuxtjs/i18n](https://i18n.nuxtjs.org/)** - internationalization
 - **[@nuxtjs/robots](https://github.com/nuxt-modules/robots)** - robots.txt generator
-- **[@pinia/nuxt](https://pinia.vuejs.org/ssr/nuxt.html)** - Pinia store for Nuxt
 - **[@sentry/vue](https://docs.sentry.io/platforms/javascript/guides/vue/)** - Sentry errors detection
-- **[@sentry/vite-plugin](https://docs.sentry.io/platforms/javascript/guides/vue/sourcemaps/uploading/vite/)** - Sentry sourcemaps uploading
+- **[@vee-validate/yup](https://vee-validate.logaretm.com/v4/guide/composition-api/getting-started#validating-with-yup)** - Yup integration for vee-validate
 - **[@vueuse/components](https://vueuse.org/guide/components)** - VueUse util components
 - **[@vueuse/core](https://vueuse.org/)** - VueUse util composables
 - **[bootstrap](https://getbootstrap.com/)** - Bootstrap for [breakpoint mixins](https://getbootstrap.com/docs/5.3/layout/breakpoints/)
@@ -118,10 +118,8 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 - **[swiper](https://swiperjs.com/)** - mobile touch slider
 - **[typograf](https://github.com/typograf/typograf)** - grammar helper
 - **[vee-validate](https://vee-validate.logaretm.com/v4/)** - Vue form validation
-- **[vue](https://vuejs.org/)** - Vue framework
 - **[vue-collapsed](https://github.com/smastrom/vue-collapsed)** - content toggle
 - **[vue-final-modal](https://vue-final-modal.org/)** - modal window
-- **[vue-router](https://router.vuejs.org/)** - Vue routing
 
 ## Development
 
