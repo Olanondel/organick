@@ -1,5 +1,3 @@
-import { useSeoMeta } from 'nuxt/app';
-
 /**
  * Update head meta tags
  * @param {object} obj

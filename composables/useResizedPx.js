@@ -1,8 +1,3 @@
-import { ref, isRef, onMounted } from 'vue';
-import { useEventListener } from '@vueuse/core';
-
-import { toResizedPx } from '@/utils/helpers';
-
 /**
  * Get reactive px value regarding element font-size
  * @param {number} pxValue desired px value

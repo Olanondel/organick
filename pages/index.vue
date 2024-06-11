@@ -10,16 +10,13 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
 import { useModal } from 'vue-final-modal';
 import { Collapse } from 'vue-collapsed';
-
-import ModalsAlert from '@/components/modals/ModalsAlert.vue';
 
 /**
  * @see https://vue-final-modal.org/
  */
-const alertModal = useModal({ component: ModalsAlert });
+const alertModal = useModal({ component: resolveComponent('LazyModalsAlert') });
 
 /**
  * @see https://github.com/smastrom/vue-collapsed

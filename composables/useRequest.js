@@ -1,5 +1,3 @@
-import { useRuntimeConfig } from 'nuxt/app';
-
 import qs from 'qs';
 
 let fetchInstance;
