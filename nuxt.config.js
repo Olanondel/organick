@@ -23,6 +23,25 @@ if (nuxtRobots) {
 //   },
 // ]);
 
+const vitePlugins = [];
+if (!isDev) {
+  const sentryAuthToken = process.env.SENTRY_AUTH_TOKEN;
+  const sentryOrg = process.env.SENTRY_ORG;
+  const sentryProject = process.env.SENTRY_PROJECT;
+  const sentryUrl = process.env.SENTRY_URL;
+
+  if (sentryAuthToken && sentryOrg && sentryProject && sentryUrl) {
+    vitePlugins.push(
+      sentryVitePlugin({
+        authToken: sentryAuthToken,
+        org: sentryOrg,
+        project: sentryProject,
+        url: sentryUrl,
+      }),
+    );
+  }
+}
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -34,7 +53,7 @@ export default defineNuxtConfig({
       isDev,
       clientUrl,
       sentry: {
-        dns: process.env.SENTRY_DNS,
+        dsn: process.env.SENTRY_DSN,
         environment: process.env.SENTRY_ENVIRONMENT,
       },
     },
@@ -62,6 +81,7 @@ export default defineNuxtConfig({
         scss: { additionalData: '@use "@/assets/styles/utils" as *;' },
       },
     },
+    plugins: vitePlugins,
   },
   routeRules: {
     // Proxy
