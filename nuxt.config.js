@@ -52,6 +52,7 @@ export default defineNuxtConfig({
     public: {
       isDev,
       clientUrl,
+      gtmID: process.env.GTM_ID,
       sentry: {
         dsn: process.env.SENTRY_DSN,
         environment: process.env.SENTRY_ENVIRONMENT,
@@ -89,6 +90,8 @@ export default defineNuxtConfig({
     '/storage/**': { proxy: `${clientUrl}storage/**` },
     // Cache
     // '/**': { headers: { 'Cache-Control': 'max-age=31536000' } },
+    // No-ssr
+    // '/profile/**': { ssr: false },
   },
   modules: [
     '@nuxtjs/eslint-module',
@@ -103,5 +106,5 @@ export default defineNuxtConfig({
   robots: { rules: robotsRules },
   svgo: { defaultImport: 'component', explicitImportsOnly: true },
   // delayHydration: { debug: process.env.DELAY_HYDRATION_DEBUG, mode: 'mount' },
-  experimental: { inlineSSRStyles: false },
+  features: { inlineStyles: false },
 });
