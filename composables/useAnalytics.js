@@ -15,19 +15,19 @@ const scripts = {
 };
 
 /**
- * Add metric on page
- * @param metricName metric name from 'scripts' object above
- * @param metricId metric unique id
+ * Add analytic metric on page
+ * @param analyticName analytic name from 'scripts' object above
+ * @param analyticId analytic unique id
  */
-function setMetric(metricName, metricId) {
+function setAnalytic(analyticName, analyticId) {
   // add script
   const script = document.createElement('script');
-  script.innerHTML = scripts[metricName].script(metricId);
+  script.innerHTML = scripts[analyticName].script(analyticId);
   document.head.appendChild(script);
 
   // add noscript
   const noscript = document.createElement('noscript');
-  noscript.innerHTML = scripts[metricName].noscript(metricId);
+  noscript.innerHTML = scripts[analyticName].noscript(analyticId);
   document.body.prepend(noscript);
 }
 
@@ -36,12 +36,12 @@ function setMetric(metricName, metricId) {
  * @param {object} obj
  * @param {string} [obj.gtmID] Google Tag Manager ID
  * @example
- * useMetrics({ gtmID: 'gtmID' });
+ * useAnalytics({ gtmID: 'gtmID' });
  */
-export const useMetrics = ({ gtmID }) => {
+export const useAnalytics = ({ gtmID }) => {
   return {
     init() {
-      if (gtmID) setMetric('gtm', gtmID);
+      if (gtmID) setAnalytic('gtm', gtmID);
     },
   };
 };
