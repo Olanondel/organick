@@ -2,6 +2,7 @@ import { defineNuxtConfig } from 'nuxt/config';
 
 import { sentryVitePlugin } from '@sentry/vite-plugin';
 // import { getFontsPreloadList } from './utils/helpers.js';
+// import imagesPrerender from './config/images-prerender';
 
 const isDev = process.env.NODE_ENV === 'development';
 const serverUrl = process.env.SERVER_URL;
@@ -101,6 +102,7 @@ export default defineNuxtConfig({
     // '@nuxtjs/i18n',
     // '@nuxtjs/device',
     '@nuxtjs/robots',
+    // '@nuxt/image',
     'nuxt-svgo',
     // 'nuxt-delay-hydration',
   ],
@@ -110,4 +112,5 @@ export default defineNuxtConfig({
   svgo: { defaultImport: 'component', explicitImportsOnly: true },
   // delayHydration: { debug: process.env.DELAY_HYDRATION_DEBUG, mode: 'mount' },
   features: { inlineStyles: false },
+  // nitro: { prerender: { routes: imagesPrerender } },
 });
