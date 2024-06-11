@@ -104,6 +104,7 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 - **[@nuxtjs/robots](https://github.com/nuxt-modules/robots)** - robots.txt generator
 - **[@pinia/nuxt](https://pinia.vuejs.org/ssr/nuxt.html)** - Pinia store for Nuxt
 - **[@sentry/vue](https://docs.sentry.io/platforms/javascript/guides/vue/)** - Sentry errors detection
+- **[@sentry/vite-plugin](https://docs.sentry.io/platforms/javascript/guides/vue/sourcemaps/uploading/vite/)** - Sentry sourcemaps uploading
 - **[@vueuse/components](https://vueuse.org/guide/components)** - VueUse util components
 - **[@vueuse/core](https://vueuse.org/)** - VueUse util composables
 - **[bootstrap](https://getbootstrap.com/)** - Bootstrap for [breakpoint mixins](https://getbootstrap.com/docs/5.3/layout/breakpoints/)

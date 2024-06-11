@@ -24,6 +24,7 @@
     "@nuxtjs/device": "^3.1.1",
     "@nuxtjs/robots": "^3.0.0",
     "@pinia/nuxt": "^0.5.1",
+    "@sentry/vite-plugin": "^2.18.0",
     "@sentry/vue": "^7.109.0",
     "@vueuse/components": "^10.9.0",
     "@vueuse/core": "^10.9.0",

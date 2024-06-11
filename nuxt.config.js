@@ -1,5 +1,6 @@
 import { defineNuxtConfig } from 'nuxt/config';
 
+import { sentryVitePlugin } from '@sentry/vite-plugin';
 // import { getFontsPreloadList } from './utils/helpers.js';
 
 const isDev = process.env.NODE_ENV === 'development';
