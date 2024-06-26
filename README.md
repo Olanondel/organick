@@ -30,6 +30,7 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
   - **/ui** - basic UI components (Button, Label etc.)
 - **[/composables](https://nuxt.com/docs/guide/directory-structure/composables)** - Vue 3 composables
 - **/configs** - static data storage
+- **/constants** - static variables
 - **[/layouts](https://nuxt.com/docs/guide/directory-structure/layouts)** - composed wrappers
 - **[/pages](https://nuxt.com/docs/guide/directory-structure/pages)** - Vue Router views
 - **[/plugins](https://nuxt.com/docs/guide/directory-structure/plugins)** - Vue plugins, initial data fetching etc.
