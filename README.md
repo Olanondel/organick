@@ -18,6 +18,7 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
       - `transitions.scss` - [Vue transitions](https://vuejs.org/guide/built-ins/transition)
       - `base.scss` - html, body, base blocks styles
       - `blocks/index.scss` - global blocks (.container etc.)
+      - `helpers.scss` - global helpers (.hidden-* etc.)
     - **/utils** - SCSS utils (variables, mixins, functions etc.):
       - `variables.scss` - [SCSS variables](https://sass-lang.com/documentation/variables/)
       - `utils.scss` - [SCSS mixins](https://sass-lang.com/documentation/at-rules/mixin/) & [functions](https://sass-lang.com/documentation/at-rules/function/)

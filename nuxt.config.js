@@ -1,11 +1,15 @@
 import { sentryVitePlugin } from '@sentry/vite-plugin';
+import {
+  API_PREFIX,
+  // STORAGE_PREFIX,
+} from './constants/variables';
 // import { getFontsPreloadList } from './utils/helpers.js';
 // import imagesPrerender from './config/images-prerender';
 
-const isDev = process.env.NODE_ENV === 'development';
-const serverUrl = process.env.SERVER_URL;
-const clientUrl = process.env.CLIENT_URL;
-const nuxtRobots = process.env.NUXT_ROBOTS;
+const isDev = import.meta.env.NODE_ENV === 'development';
+const serverUrl = import.meta.env.SERVER_URL;
+const clientUrl = import.meta.env.CLIENT_URL;
+const nuxtRobots = import.meta.env.NUXT_ROBOTS;
 
 let robotsRules = {};
 if (nuxtRobots) {
@@ -25,10 +29,10 @@ if (nuxtRobots) {
 
 const vitePlugins = [];
 if (!isDev) {
-  const sentryAuthToken = process.env.SENTRY_AUTH_TOKEN;
-  const sentryOrg = process.env.SENTRY_ORG;
-  const sentryProject = process.env.SENTRY_PROJECT;
-  const sentryUrl = process.env.SENTRY_URL;
+  const sentryAuthToken = import.meta.env.SENTRY_AUTH_TOKEN;
+  const sentryOrg = import.meta.env.SENTRY_ORG;
+  const sentryProject = import.meta.env.SENTRY_PROJECT;
+  const sentryUrl = import.meta.env.SENTRY_URL;
 
   if (sentryAuthToken && sentryOrg && sentryProject && sentryUrl) {
     vitePlugins.push(
@@ -42,6 +46,21 @@ if (!isDev) {
   }
 }
 
+const routeRules = {
+  // Cache
+  // '/**': { headers: { 'Cache-Control': 'max-age=31536000' } },
+  // No-ssr
+  // '/profile/**': { ssr: false },
+};
+if (isDev) {
+  routeRules[`/${API_PREFIX}/**`] = {
+    proxy: `${clientUrl}/${API_PREFIX}/**`,
+  };
+  // routeRules[`/${STORAGE_PREFIX}/**`] = {
+  //   proxy: `${clientUrl}/${STORAGE_PREFIX}/**`,
+  // };
+}
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -51,10 +70,10 @@ export default defineNuxtConfig({
     public: {
       isDev,
       clientUrl,
-      gtmID: process.env.GTM_ID,
+      gtmID: import.meta.env.GTM_ID,
       sentry: {
-        dsn: process.env.SENTRY_DSN,
-        environment: process.env.SENTRY_ENVIRONMENT,
+        dsn: import.meta.env.SENTRY_DSN,
+        environment: import.meta.env.SENTRY_ENVIRONMENT,
       },
     },
   },
@@ -84,15 +103,7 @@ export default defineNuxtConfig({
     plugins: vitePlugins,
   },
   sourcemap: true,
-  routeRules: {
-    // Proxy
-    '/api/**': { proxy: `${clientUrl}api/**` },
-    '/storage/**': { proxy: `${clientUrl}storage/**` },
-    // Cache
-    // '/**': { headers: { 'Cache-Control': 'max-age=31536000' } },
-    // No-ssr
-    // '/profile/**': { ssr: false },
-  },
+  routeRules,
   modules: [
     '@nuxtjs/eslint-module',
     '@pinia/nuxt',
@@ -106,9 +117,17 @@ export default defineNuxtConfig({
     '@vee-validate/nuxt',
   ],
   eslint: { lintOnStart: false },
+  // i18n: {
+  //   locales: [{ code: 'en', file: 'en.json' }],
+  //   defaultLocale: 'en',
+  //   detectBrowserLanguage: false,
+  //   langDir: 'lang',
+  //   lazy: true,
+  //   parallelPlugin: true,
+  // },
   robots: { rules: robotsRules },
   svgo: { defaultImport: 'component', explicitImportsOnly: true },
-  // delayHydration: { debug: process.env.DELAY_HYDRATION_DEBUG, mode: 'mount' },
+  // delayHydration: { debug: import.meta.env.DELAY_HYDRATION_DEBUG, mode: 'mount' },
   veeValidate: {
     autoImports: true,
     componentNames: {

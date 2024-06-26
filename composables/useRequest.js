@@ -1,4 +1,5 @@
 import qs from 'qs';
+import { API_PREFIX, API_VERSIONS } from '@/constants/variables';
 
 let fetchInstance;
 
@@ -17,33 +18,28 @@ let fetchInstance;
  * @see https://nuxt.com/docs/api/composables/use-async-data
  * @see https://pinia.vuejs.org/ssr/nuxt.html
  */
-export const useRequest = (url, options = {}, apiVersion = 'v1') => {
+export const useRequest = (url, options = {}, apiVersion = API_VERSIONS.v1) => {
   // creating instance only if it doesn't exist
   if (!fetchInstance) {
     const {
       app: { baseURL },
-      serverUrl,
       public: { isDev, clientUrl },
     } = useRuntimeConfig();
 
     // configuring url
-    const apiPrefix = 'api';
+    let baseUrl = baseURL === '/' ? '' : baseURL;
 
-    let baseUrl = baseURL;
-
-    switch (true) {
-      case process.server:
-        // server url
-        baseUrl = serverUrl;
-        break;
-      case !isDev:
-        // client url only on prod (proxy for dev)
-        baseUrl = clientUrl;
-        break;
+    if (import.meta.server) {
+      // server url
+      const { serverUrl } = useRuntimeConfig();
+      baseUrl = serverUrl;
+    } else if (!isDev) {
+      // client url only on prod (proxy for dev)
+      baseUrl = clientUrl;
     }
 
     fetchInstance = $fetch.create({
-      baseURL: `${baseUrl}${apiPrefix}`,
+      baseURL: `${baseUrl}/${API_PREFIX}`,
     });
   }
 
@@ -54,5 +50,5 @@ export const useRequest = (url, options = {}, apiVersion = 'v1') => {
     options.query = undefined;
   }
 
-  return fetchInstance(`${apiVersion}${url}`, options);
+  return fetchInstance(`/${apiVersion}${url}`, options);
 };

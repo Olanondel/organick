@@ -128,7 +128,7 @@ export function getFontPreloadList({ path, weights }, baseUrl = '/') {
 }
 
 /**
- *
+ * Get fonts preload list
  * @param {object} fontsList font params list
  * @param {string} fontsList.path font path
  * @param {number[]} fontsList.weights font path

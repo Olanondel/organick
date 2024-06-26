@@ -29,3 +29,16 @@
   scrollbar-width: none; // Firefox
   &::-webkit-scrollbar { display: none; }
 }
+
+// Breakpoints
+@mixin media-breakpoint-desktop {
+  @include media-breakpoint-up(sm) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-mobile {
+  @include media-breakpoint-down(sm) {
+    @content;
+  }
+}

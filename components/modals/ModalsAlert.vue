@@ -34,7 +34,7 @@ import { VueFinalModal } from 'vue-final-modal';
   }
 
   &__content {
-    padding: 20px;
+    padding: em(20);
     background-color: $color-white;
   }
 }
