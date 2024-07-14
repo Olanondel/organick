@@ -139,4 +139,5 @@ export default defineNuxtConfig({
   },
   features: { inlineStyles: false },
   // nitro: { prerender: { routes: imagesPrerender } },
+  compatibilityDate: '2024-07-14',
 });
