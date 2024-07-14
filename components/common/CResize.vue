@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
 $design-width: 1920;
 $design-height: 1080;
 $default-size: 16;
