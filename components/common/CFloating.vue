@@ -2,13 +2,7 @@
 /**
  * @see https://floating-ui.com/docs/vue
  */
-import {
-  useFloating,
-  offset,
-  shift,
-  autoUpdate,
-  // limitShift,
-} from '@floating-ui/vue';
+import { useFloating, offset, shift, autoUpdate } from '@floating-ui/vue';
 
 const props = defineProps({
   referenceRef: {
@@ -23,6 +17,10 @@ const props = defineProps({
     type: Number,
     default: 0,
   },
+  padding: {
+    type: Number,
+    default: 0,
+  },
 });
 
 const referenceElement = computed(() => props.referenceRef);
@@ -31,13 +29,7 @@ const rootRef = ref(null);
 // init floating plugin
 const { floatingStyles } = useFloating(referenceElement, rootRef, {
   placement: props.position,
-  middleware: [
-    offset(() => props.gap),
-    shift({
-      // TODO: not working in @floating-ui/vue
-      // limiter: limitShift({ offset: () => props.gap }),
-    }),
-  ],
+  middleware: [offset(props.gap), shift({ padding: props.padding })],
   whileElementsMounted: autoUpdate,
 });
 </script>
