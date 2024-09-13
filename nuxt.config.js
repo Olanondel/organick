@@ -105,7 +105,6 @@ export default defineNuxtConfig({
   sourcemap: true,
   routeRules,
   modules: [
-    '@nuxtjs/eslint-module',
     '@pinia/nuxt',
     // '@nuxtjs/i18n',
     // '@nuxtjs/device',
@@ -116,7 +115,6 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@vee-validate/nuxt',
   ],
-  eslint: { lintOnStart: false },
   // i18n: {
   //   locales: [{ code: 'en', file: 'en.json' }],
   //   defaultLocale: 'en',
