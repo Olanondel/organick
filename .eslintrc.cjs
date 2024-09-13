@@ -1,11 +1,8 @@
-require("@rushstack/eslint-patch/modern-module-resolution");
+require('@rushstack/eslint-patch/modern-module-resolution');
 
 module.exports = {
   root: true,
-  extends: [
-    '@nuxt/eslint-config',
-    '@vue/eslint-config-prettier',
-  ],
+  extends: ['@nuxt/eslint-config', '@vue/eslint-config-prettier'],
   parserOptions: {
     ecmaVersion: 'latest',
   },
@@ -13,4 +10,5 @@ module.exports = {
     'no-undef': 'off',
     'vue/no-v-html': 'off',
   },
+  ignorePatterns: ['public/*'],
 };
