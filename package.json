@@ -12,7 +12,7 @@
     "build": "nuxt build",
     "dev": "nuxt dev --host",
     "prod": "node .output/server/index.mjs",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --ignore-path .gitignore",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "build & preview": "nuxt build && nuxt preview",
