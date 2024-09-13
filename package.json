@@ -2,7 +2,7 @@
   "name": "nuxt-3-boilerplate",
   "private": true,
   "version": "1.0.0",
-  "boilerplateVersion": "1.0.4",
+  "boilerplateVersion": "1.0.5",
   "engines": {
     "node": ">=18 <21",
     "yarn": ">=1.22.19 <2"
