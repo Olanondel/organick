@@ -9,10 +9,8 @@ import {
 const isDev = import.meta.env.NODE_ENV === 'development';
 const serverUrl = import.meta.env.SERVER_URL;
 const clientUrl = import.meta.env.CLIENT_URL;
-const nuxtRobots = JSON.parse(
-  import.meta.env.NUXT_ROBOTS?.replace(/'/g, '"') ||
-  JSON.stringify({ Disallow: ' / ' }),
-);
+const nuxtRobots = import.meta.env.NUXT_ROBOTS?.replace(/'/g, '"') ||
+  JSON.stringify({ Disallow: ' / ' });
 
 
 let robotsRules = {};
