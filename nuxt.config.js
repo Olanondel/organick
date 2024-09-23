@@ -12,7 +12,9 @@ const serverUrl = import.meta.env.SERVER_URL;
 const clientUrl = import.meta.env.CLIENT_URL;
 
 let robotsRules = {};
-const nuxtRobots = import.meta.env.NUXT_ROBOTS;
+const nuxtRobots =
+  import.meta.env.NUXT_ROBOTS?.replace(/'/g, '"') ||
+  JSON.stringify({ Disallow: ' / ' });
 if (nuxtRobots) {
   try {
     robotsRules = JSON.parse(nuxtRobots);
