@@ -1,4 +1,3 @@
-import qs from 'qs';
 import { API_PREFIX, API_VERSIONS } from '@/constants/variables';
 
 let fetchInstance;
@@ -23,7 +22,7 @@ export const useRequest = (url, options = {}, apiVersion = API_VERSIONS.v1) => {
   if (!fetchInstance) {
     const {
       app: { baseURL },
-      public: { isDev, clientUrl },
+      public: { clientUrl },
     } = useRuntimeConfig();
 
     // configuring url
@@ -33,7 +32,7 @@ export const useRequest = (url, options = {}, apiVersion = API_VERSIONS.v1) => {
       // server url
       const { serverUrl } = useRuntimeConfig();
       baseUrl = serverUrl;
-    } else if (!isDev) {
+    } else if (!import.meta.dev) {
       // client url only on prod (proxy for dev)
       baseUrl = clientUrl;
     }
@@ -41,13 +40,6 @@ export const useRequest = (url, options = {}, apiVersion = API_VERSIONS.v1) => {
     fetchInstance = $fetch.create({
       baseURL: `${baseUrl}/${API_PREFIX}`,
     });
-  }
-
-  // stringify query
-  if (options.query) {
-    url = `${url}?${qs.stringify(options.query)}`;
-
-    options.query = undefined;
   }
 
   return fetchInstance(`/${apiVersion}${url}`, options);

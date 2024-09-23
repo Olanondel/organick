@@ -1,4 +1,4 @@
-import { IMAGE_PATH } from '@/constants/variables';
+import { IPX_WEBP_IMAGE_PATH } from '@/constants/variables';
 
 /**
  * Image paths for prerender by IPX ('@nuxt/image')
@@ -16,4 +16,4 @@ import { IMAGE_PATH } from '@/constants/variables';
  */
 const images = [];
 
-export default images.map((image) => `${IMAGE_PATH}${image}`);
+export default images.map((image) => `${IPX_WEBP_IMAGE_PATH}${image}`);

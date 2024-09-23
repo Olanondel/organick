@@ -6,12 +6,13 @@ import {
 // import { getFontsPreloadList } from './utils/helpers.js';
 // import imagesPrerender from './config/images-prerender';
 
-const isDev = import.meta.env.NODE_ENV === 'development';
+const isDev = import.meta.dev;
+
 const serverUrl = import.meta.env.SERVER_URL;
 const clientUrl = import.meta.env.CLIENT_URL;
-const nuxtRobots = import.meta.env.NUXT_ROBOTS;
 
 let robotsRules = {};
+const nuxtRobots = import.meta.env.NUXT_ROBOTS;
 if (nuxtRobots) {
   try {
     robotsRules = JSON.parse(nuxtRobots);
@@ -53,12 +54,10 @@ const routeRules = {
   // '/profile/**': { ssr: false },
 };
 if (isDev) {
-  routeRules[`/${API_PREFIX}/**`] = {
-    proxy: `${clientUrl}/${API_PREFIX}/**`,
-  };
-  // routeRules[`/${STORAGE_PREFIX}/**`] = {
-  //   proxy: `${clientUrl}/${STORAGE_PREFIX}/**`,
-  // };
+  Object.assign(routeRules, {
+    [`/${API_PREFIX}/**`]: { proxy: `${clientUrl}/${API_PREFIX}/**` },
+    // [`/${STORAGE_PREFIX}/**`]: { proxy: `${clientUrl}/${STORAGE_PREFIX}/**` },
+  });
 }
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -68,7 +67,6 @@ export default defineNuxtConfig({
   runtimeConfig: {
     serverUrl,
     public: {
-      isDev,
       clientUrl,
       gtmID: import.meta.env.GTM_ID,
       sentry: {
