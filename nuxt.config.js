@@ -6,7 +6,7 @@ import {
 // import { getFontsPreloadList } from './utils/helpers.js';
 // import imagesPrerender from './config/images-prerender';
 
-const isDev = import.meta.dev;
+const isDev = process.env.NODE_ENV === 'development';
 
 const serverUrl = import.meta.env.SERVER_URL;
 const clientUrl = import.meta.env.CLIENT_URL;
