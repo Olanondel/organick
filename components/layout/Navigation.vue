@@ -17,7 +17,11 @@ const navigation = [
         :key="index"
         class="navigation__item"
       >
-        <NuxtLink :to="item.href" class="navigation__link">
+        <NuxtLink
+          :to="item.href"
+          class="navigation__link"
+          exact-active-class="navigation__link--active"
+        >
           <span class="navigation__font navigation__font--item">
             {{ item.text }}
           </span>
@@ -38,10 +42,23 @@ const navigation = [
   }
 
   &__link {
+    color: $color-blue-1;
+
+    @include hover() {
+      text-decoration: underline;
+    }
+
+    &--active {
+      text-decoration: underline;
+      color: $color-green-1;
+    }
   }
 
   &__font {
     &--item {
+      font-size: em(20);
+      line-height: em(23, 20);
+      font-weight: $font-weight-bold;
     }
   }
 }
