@@ -11,4 +11,14 @@
 }
 
 // Font Name
-// @include font-face($font-family-default-name, '#{$fonts-path}/font-name/400', 400, normal);
+ @include font-face($font-family-open-sans-name, '#{$fonts-path}/open-sans/OpenSans-Regular', $font-weight-regular, normal);
+ @include font-face($font-family-open-sans-name, '#{$fonts-path}/open-sans/OpenSans-Bold', $font-weight-bold, normal);
+ @include font-face($font-family-open-sans-name, '#{$fonts-path}/open-sans/OpenSans-SemiBold', $font-weight-semi-bold, normal);
+
+ @include font-face($font-family-roboto-name, '#{$fonts-path}/roboto/Roboto-Regular', $font-weight-regular, normal);
+ @include font-face($font-family-roboto-name, '#{$fonts-path}/roboto/Roboto-Italic', $font-weight-regular, italic);
+ @include font-face($font-family-roboto-name, '#{$fonts-path}/roboto/Roboto-Medium', $font-weight-medium, normal);
+ @include font-face($font-family-roboto-name, '#{$fonts-path}/roboto/Roboto-Bold', $font-weight-bold, normal);
+ @include font-face($font-family-roboto-name, '#{$fonts-path}/roboto/RobotoSlab-ExtraBold', $font-weight-extra-bold, normal);
+
+ @include font-face($font-family-yellowtail-name, '#{$fonts-path}/yellowtail/Yellowtail-Regular', $font-weight-regular, normal);

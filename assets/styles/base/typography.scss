@@ -1,0 +1,43 @@
+@import "mixins";
+
+// Sans Head FONT-FAMILY
+//
+// sh300-1u  -  54 / 64 (300) ------  (upp)  ---------
+// sh300-2u  -  40 / 52 (300) 0.01em  (upp)  ---------
+// sh300-3u  -  30 / 45 (300) 0.03em  (upp)  ---------
+// sh300-4u  -  20 / 30 (300) ------  (upp)  ---------
+//
+
+//$sansHead: 'Genesis Sans Head Office';
+
+////////////// Light //////////////
+//  $typography-h-light: (
+//    sh300-1u: (
+//      font-family: $sansHead,
+//      font-size: 54,
+//      line-height: 64,
+//      font-weight: 300,
+//      letter-spacing: 0,
+//      text-transform: uppercase,
+//    ),
+//    sh300-2u: (
+//      font-family: $sansHead,
+//      font-size: 40,
+//      line-height: 52,
+//      font-weight: 300,
+//      letter-spacing: 0.01,
+//      text-transform: uppercase,
+//    ),
+//  );
+//
+//  @mixin sh300-1u { @include typography('sh300-1u', $typography-h-light); }
+//
+//  @mixin sh300-2u { @include typography('sh300-2u', $typography-h-light); }
+//
+//  @include typography-class($typography-h-light);
+//
+//  @include media-breakpoint-down(sm) {
+//    @include typography-class($typography-h-light, 'sm');
+//  }
+
+

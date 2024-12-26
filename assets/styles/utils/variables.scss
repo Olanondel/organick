@@ -2,6 +2,18 @@
 $color-white: #ffffff;
 $color-black: #000000;
 
+$color-blue-1: #274C5B;
+
+$color-green-1: #7EB693;
+
+$color-yellow-1: #EFD372;
+
+$color-white-1: #D4D4D4;
+$color-white-2: #F9F8F8;
+$color-white-3: #EFF6F1;
+
+$color-grey-1: #525C60;
+
 // paths
 $fonts-path: '/fonts';
 $images-path: '/images';
@@ -13,8 +25,25 @@ $time-slow: 350ms;
 
 // font
 $font-size-default: 16;
-$font-family-default-name: 'Font Name';
-$font-family-default: $font-family-default-name, sans-serif;
+
+$font-family-open-sans-name: 'Open sans';
+$font-family-roboto-name: 'Roboto';
+$font-family-yellowtail-name: 'Yellowtail';
+
+$font-family-default: $font-family-open-sans-name, sans-serif;
+$font-family-roboto: $font-family-roboto-name, sans-serif;
+$font-family-yellowtail: $font-family-yellowtail-name, sans-serif;
+
+// font weights
+$font-weight-thin: 100;
+$font-weight-ultra-thin: 200;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+$font-weight-black: 900;
 
 // other
 // $gap-desktop: 40;

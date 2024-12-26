@@ -1,0 +1,24 @@
+@mixin typography($name, $typography) {
+  $styles: map-get($typography, $name);
+
+  font-weight: map-get($styles, font-weight);
+  font-size: em(map-get($styles, font-size));
+  font-family: map-get($styles, font-family);
+  line-height: (map-get($styles, line-height)/map-get($styles, font-size));
+  letter-spacing: #{map-get($styles, letter-spacing)}em;
+  text-transform: map-get($styles, text-transform);
+}
+
+@mixin typography-class($typography, $suffix: false) {
+  @each $label, $map in $typography {
+    $suffixString: '';
+
+    @if ($suffix) {
+      $suffixString: '-#{$suffix}';
+    }
+
+    .#{$label + $suffixString} {
+      @include typography($label, $typography);
+    }
+  }
+}

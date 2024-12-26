@@ -1,0 +1,25 @@
+.container {
+  &--sm {
+    max-width: em(1168);
+    padding: 0 em(30);
+    margin: 0 auto;
+  }
+
+  &--md {
+    max-width: em(1460);
+    padding: 0 em(30);
+    margin: 0 auto;
+  }
+
+  &--xl {
+    max-width: em(1660);
+    padding: 0 em(30);
+    margin: 0 auto;
+  }
+
+  &--md--right {
+    max-width: em(1430);
+    padding-left: em(30);
+    margin-left: auto;
+  }
+}

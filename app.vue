@@ -1,12 +1,12 @@
 <template>
   <div id="app" class="app">
-    App
+    <CResize>
+      <NuxtLayout v-slot="{ className }" class="app__layout">
+        <NuxtPage :class="className" />
+      </NuxtLayout>
 
-    <NuxtLayout v-slot="{ className }" class="app__layout">
-      <NuxtPage :class="className" />
-    </NuxtLayout>
-
-    <ModalsContainer />
+      <ModalsContainer />
+    </CResize>
   </div>
 </template>
 

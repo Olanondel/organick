@@ -1,11 +1,31 @@
+<!--<template>-->
+<!--  <div class="pages-index">-->
+<!--    <button type="button" @click="alertModal.open">Open alert modal</button>-->
+
+<!--    <button type="button" @click="toggleContent">Toggle content</button>-->
+<!--    <Collapse :when="showContent">Toggleable content</Collapse>-->
+<!--  </div>-->
+<!--</template>-->
+
 <template>
   <div class="pages-index">
-    Index page
+    <SectionHomeExploreNow />
 
-    <button type="button" @click="alertModal.open">Open alert modal</button>
+    <SectionHomeCards />
 
-    <button type="button" @click="toggleContent">Toggle content</button>
-    <Collapse :when="showContent">Toggleable content</Collapse>
+    <SectionHomeAboutUs />
+
+    <SectionHomeProducts />
+
+    <SectionHomeReviews />
+
+    <SectionHomeOfferOrganic />
+
+    <SectionHomeEcoFriendly />
+
+    <SectionHomeGallery />
+
+    <SectionHomeNews />
   </div>
 </template>
 
@@ -29,5 +49,6 @@ function toggleContent() {
 
 <style scoped lang="scss">
 .pages-index {
+  @include box(200);
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="layouts-default" :class="className">
-    Layout
+    <LayoutHeader />
 
     <slot class-name="layouts-default__view" />
   </div>
