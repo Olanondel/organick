@@ -3,6 +3,8 @@
     <LayoutHeader />
 
     <slot class-name="layouts-default__view" />
+
+    <LayoutFooter />
   </div>
 </template>
 

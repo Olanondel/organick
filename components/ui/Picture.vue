@@ -1,5 +1,5 @@
 <script setup></script>
 
 <template>
-  <picture> </picture>
+  <picture></picture>
 </template>

@@ -84,7 +84,7 @@
   }
 
   &__position {
-    color: #525c60;
+    color: $color-grey-1;
   }
 }
 </style>
