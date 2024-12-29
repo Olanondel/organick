@@ -27,7 +27,7 @@ const news = [
     title: 'The Benefits of Vitamin D & How to Get It',
     admin: 'By Rachi Card',
     text: 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum',
-    image: '/images/news/image-1.jpg',
+    image: '/images/news/image-3.jpg',
   },
 
   {
@@ -35,14 +35,14 @@ const news = [
     title: 'Our Favourite Summertime Tommeto',
     admin: 'By Rachi Card',
     text: 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum',
-    image: '/images/news/image-2.jpg',
+    image: '/images/news/image-4.jpg',
   },
   {
     date: '25 Nov',
     title: 'The Benefits of Vitamin D & How to Get It',
     admin: 'By Rachi Card',
     text: 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum',
-    image: '/images/news/image-1.jpg',
+    image: '/images/news/image-5.jpg',
   },
 
   {
@@ -50,7 +50,7 @@ const news = [
     title: 'Our Favourite Summertime Tommeto',
     admin: 'By Rachi Card',
     text: 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum',
-    image: '/images/news/image-2.jpg',
+    image: '/images/news/image-6.jpg',
   },
 ];
 </script>

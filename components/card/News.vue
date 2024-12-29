@@ -29,7 +29,7 @@ defineProps({
 
 <template>
   <div class="card-news">
-    <img :src="image" alt="" class="card-news__image" />
+    <img :src="image" alt="" class="card-news__image" loading="lazy" />
 
     <div class="card-news__date">
       <span class="card-news__font card-news__font--date"> {{ date }} </span>
