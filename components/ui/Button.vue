@@ -74,7 +74,7 @@ const emitClick = (event) => {
 
   border-radius: em(16);
   padding: em(28) em(39) em(29);
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: em(10);
   flex-shrink: 0;
