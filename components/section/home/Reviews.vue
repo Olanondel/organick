@@ -1,4 +1,6 @@
 <script setup>
+import UiPicture from '@/components/ui/Picture.vue';
+
 const achievements = [
   { count: '100%', text: 'Organic' },
   { count: '285', text: 'Active Product' },
@@ -9,15 +11,16 @@ const achievements = [
 
 <template>
   <section class="section-reviews">
-    <img
+    <UiPicture
       src="/images/reviews/review-bg-left.png"
-      alt=""
       class="section-reviews__bg section-reviews__bg--left"
+      :resolutions="[]"
     />
-    <img
+
+    <UiPicture
       src="/images/reviews/review-bg-right.png"
-      alt=""
       class="section-reviews__bg section-reviews__bg--right"
+      :resolutions="[]"
     />
 
     <div class="container container--sm">

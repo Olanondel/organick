@@ -9,28 +9,67 @@ defineProps({
     type: String,
     default: 'button',
   },
+  text: {
+    type: String,
+    required: true,
+  },
+  to: {
+    type: String,
+    default: '',
+  },
+  href: {
+    type: String,
+    default: '',
+  },
+  target: {
+    type: String,
+    default: undefined,
+  },
+  isDisabled: {
+    type: Boolean,
+    default: false,
+  },
 
   theme: {
     type: String,
     default: 'default',
   },
 });
+
+const emit = defineEmits(['click']);
+
+const emitClick = (event) => {
+  emit('click', event);
+};
 </script>
 
 <template>
-  <button :type="type" :class="`button button--theme--${theme}`">
-    <span class="button__font">
+  <CLinkTag
+    class="ui-button"
+    :class="{
+      [`ui-button--theme--${theme}`]: theme,
+      'ui-button--disabled': isDisabled,
+    }"
+    :type="type"
+    :to="to"
+    :href="href"
+    :target="target"
+    :aria-label="text"
+    :tabindex="isDisabled ? -1 : 0"
+    @click="emitClick"
+  >
+    <span class="ui-button__font">
       <slot />
     </span>
 
-    <span v-if="hasIcon" class="button__wrapper button__wrapper--icon">
-      <img src="/icons/arrow-right.svg" alt="" class="button__icon" />
+    <span v-if="hasIcon" class="ui-button__wrapper ui-button__wrapper--icon">
+      <img src="/icons/arrow-right.svg" alt="" class="ui-button__icon" />
     </span>
-  </button>
+  </CLinkTag>
 </template>
 
 <style scoped lang="scss">
-.button {
+.ui-button {
   $parent: &;
 
   border-radius: em(16);
@@ -38,6 +77,7 @@ defineProps({
   display: flex;
   align-items: center;
   gap: em(10);
+  flex-shrink: 0;
 
   &__font {
     font-family: $font-family-roboto;

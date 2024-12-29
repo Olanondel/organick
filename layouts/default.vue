@@ -4,6 +4,8 @@
 
     <slot class-name="layouts-default__view" />
 
+    <SectionNewsletter class="layouts-default__newsletter" />
+
     <LayoutFooter />
   </div>
 </template>
@@ -26,6 +28,10 @@ defineProps({
 
   &:deep(#{$parent}__view) {
     flex-grow: 1;
+  }
+
+  &__newsletter {
+    margin-bottom: em(117);
   }
 }
 </style>
