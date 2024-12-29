@@ -2,7 +2,7 @@
   <div class="layouts-default" :class="className">
     <LayoutHeader />
 
-    <LayoutPageHeader />
+    <LayoutPageHeader v-if="hasPageHeader" />
 
     <slot class-name="layouts-default__view" />
 
@@ -18,6 +18,14 @@ defineProps({
     type: String,
     default: undefined,
   },
+});
+
+const route = useRoute();
+
+const pagePathsWithoutPageHeader = ['/'];
+
+const hasPageHeader = computed(() => {
+  return !pagePathsWithoutPageHeader.includes(route.path);
 });
 </script>
 

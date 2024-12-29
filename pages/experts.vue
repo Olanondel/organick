@@ -168,5 +168,9 @@ const experts = [
     grid-template-columns: repeat(3, 1fr);
     gap: em(42) em(27);
   }
+
+  &__card {
+    height: 100%;
+  }
 }
 </style>

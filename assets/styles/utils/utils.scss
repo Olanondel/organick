@@ -42,3 +42,47 @@
     @content;
   }
 }
+
+// Text overflow
+// Requires inline-block or block for proper styling
+@mixin text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-line-clamp#truncating_a_paragraph
+@mixin line-clamp($line-count: 3) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line-count;
+  overflow: hidden;
+}
+
+// Скрыть визуально но оставить видимым для средств чтения с экрана
+// https://habr.com/ru/companies/ruvds/articles/485640/
+@mixin visually-hidden() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  pointer-events: none;
+  touch-action: none;
+  border: 0;
+}
+
+// Скрыть визуально, удаляется из дерева доступности и в результате, его не замечают средства для чтения с экрана
+// https://habr.com/ru/companies/ruvds/articles/485640/
+@mixin invisible() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  touch-action: none;
+  visibility: hidden;
+}

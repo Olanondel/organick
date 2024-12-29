@@ -51,7 +51,11 @@ defineProps({
           :key="index"
           class="card-expert__social"
         >
-          <a href="#" target="_blank" :aria-label="`${item.name} link`">
+          <a
+            :href="item.href"
+            target="_blank"
+            :aria-label="`${item.name} link`"
+          >
             <img :src="item.icon" alt="" class="card-expert__icon" />
           </a>
         </li>
@@ -63,6 +67,8 @@ defineProps({
 <style scoped lang="scss">
 .card-expert {
   border-radius: em(30);
+  display: flex;
+  flex-direction: column;
 
   &__image {
     height: em(485);
@@ -81,7 +87,8 @@ defineProps({
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    gap: em(15);
+    gap: em(30);
+    flex-grow: 1;
   }
 
   &__about {
@@ -90,6 +97,8 @@ defineProps({
   &__title {
     color: #274c5b;
     margin-bottom: em(2);
+
+    @include line-clamp(2);
   }
 
   &__font {
@@ -114,6 +123,7 @@ defineProps({
   &__socials {
     display: flex;
     gap: em(17);
+    flex-shrink: 0;
   }
 
   &__social {
