@@ -68,14 +68,14 @@ defineProps({
 <style scoped lang="scss">
 .card-news {
   position: relative;
-  padding: em(194) em(32) 0;
+  padding: em(306) em(32) 0;
   border-radius: em(30);
 
   &__image {
     position: absolute;
     inset: 0;
     width: 100%;
-    height: 100%;
+    height: calc(100% - #{em(65)});
     object-fit: cover;
     border-radius: em(30);
   }
@@ -125,9 +125,12 @@ defineProps({
     background-color: $color-white;
     border-radius: em(31) em(34) em(30) em(30);
     position: relative;
-    padding: em(46) em(91) em(60) em(57);
-    transform: translateY(em(68));
+    padding: em(46) em(57) em(60) em(57);
     box-shadow: 0 20px 35px 0 rgba(167, 167, 167, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
   }
 
   &__admin {
@@ -151,6 +154,7 @@ defineProps({
   &__text {
     color: $color-grey-1;
     margin-bottom: em(15);
+    flex-grow: 1;
   }
 }
 </style>

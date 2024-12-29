@@ -1,15 +1,15 @@
 <script setup>
 const route = useRoute();
 
-const routeMetaData = computed(() => {
-  return route.meta.hero || {};
+const data = computed(() => {
+  return route.meta.pageHeader || {};
 });
 </script>
 
 <template>
   <div class="layout-page-header">
     <UiPicture
-      src="/images/page-header/team/team.jpg"
+      :src="data.image"
       class="layout-page-header__bg"
       width="1920"
       height="450"
@@ -20,7 +20,7 @@ const routeMetaData = computed(() => {
     <div class="layout-page-header__content">
       <div class="layout-page-header__title">
         <span class="layout-page-header__font layout-page-header__font--title">
-          Our Team
+          {{ data.title }}
         </span>
       </div>
     </div>

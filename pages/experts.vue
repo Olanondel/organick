@@ -108,6 +108,13 @@ const experts = [
     ],
   },
 ];
+
+definePageMeta({
+  pageHeader: {
+    title: 'Our Team',
+    image: '/images/page-header/team/team.jpg',
+  },
+});
 </script>
 
 <template>
