@@ -1,7 +1,7 @@
 <script setup>
 const navigation = [
   { href: '/', text: 'Home' },
-  { href: '/About', text: 'About' },
+  { href: '/experts', text: 'Experts' },
   { href: '/Pages', text: 'Pages' },
   { href: '/Shop', text: 'Shop' },
   { href: '/Projects', text: 'Projects' },

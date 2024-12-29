@@ -7,6 +7,8 @@
         <UiPicture
           src="images/newsletter/newsletter.jpg"
           class="section-newsletter__bg"
+          width="1400"
+          height="323"
           aria-hidden
         />
 
