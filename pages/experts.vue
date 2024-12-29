@@ -42,7 +42,7 @@ const experts = [
   {
     name: 'Riga Pelore',
     job: 'Farmer',
-    photo: '/images/experts/3/1.jpg',
+    photo: '/images/experts/3/1.png',
     socials: [
       {
         icon: '/icons/social/fb.svg',

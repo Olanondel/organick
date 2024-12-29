@@ -25,7 +25,6 @@
   $parent: &;
 
   padding: em(69) 0;
-  background-color: $color-white-2;
 
   &__content {
     display: flex;
