@@ -10,6 +10,8 @@ definePageMeta({
 <template>
   <section class="pages-about">
     <SectionAbout />
+
+    <SectionAboutWhyChoose />
   </section>
 </template>
 
