@@ -2,7 +2,7 @@
 const navigation = [
   { href: '/', text: 'Home' },
   { href: '/experts', text: 'Experts' },
-  { href: '/Pages', text: 'Pages' },
+  { href: '/about', text: 'About' },
   { href: '/Shop', text: 'Shop' },
   { href: '/Projects', text: 'Projects' },
   { href: '/News', text: 'News' },

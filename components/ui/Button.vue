@@ -9,10 +9,7 @@ defineProps({
     type: String,
     default: 'button',
   },
-  text: {
-    type: String,
-    required: true,
-  },
+
   to: {
     type: String,
     default: '',
@@ -54,7 +51,6 @@ const emitClick = (event) => {
     :to="to"
     :href="href"
     :target="target"
-    :aria-label="text"
     :tabindex="isDisabled ? -1 : 0"
     @click="emitClick"
   >

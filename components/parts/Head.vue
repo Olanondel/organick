@@ -20,15 +20,14 @@ defineProps({
 <template>
   <div class="parts-head" :class="`parts-head--theme--${theme}`">
     <h3 v-if="subtitle" class="parts-head__subtitle">
-      <span class="parts-head__font parts-head__font--subtitle">
-        {{ subtitle }}
-      </span>
+      <span
+        class="parts-head__font parts-head__font--subtitle"
+        v-html="subtitle"
+      />
     </h3>
 
     <h2 v-if="title" class="parts-head__title">
-      <span class="parts-head__font parts-head__font--title">
-        {{ title }}
-      </span>
+      <span class="parts-head__font parts-head__font--title" v-html="title" />
     </h2>
   </div>
 </template>
