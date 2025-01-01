@@ -21,7 +21,11 @@ import { products } from '@/configs/products';
           />
         </div>
 
-        <UiButton has-icon class="section-products__button">Load More</UiButton>
+        <div class="section-products__footer">
+          <UiButton has-icon class="section-products__button">
+            Load More
+          </UiButton>
+        </div>
       </div>
     </div>
   </section>
@@ -41,6 +45,10 @@ import { products } from '@/configs/products';
     grid-template-columns: repeat(4, 1fr);
     gap: em(20);
     margin-bottom: em(122);
+  }
+
+  &__footer {
+    text-align: center;
   }
 
   &__button {
