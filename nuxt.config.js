@@ -1,4 +1,3 @@
-import { sentryVitePlugin } from '@sentry/vite-plugin';
 import {
   API_PREFIX,
   // STORAGE_PREFIX,
@@ -31,23 +30,6 @@ if (nuxtRobots) {
 // ]);
 
 const vitePlugins = [];
-if (!isDev) {
-  const sentryAuthToken = import.meta.env.SENTRY_AUTH_TOKEN;
-  const sentryOrg = import.meta.env.SENTRY_ORG;
-  const sentryProject = import.meta.env.SENTRY_PROJECT;
-  const sentryUrl = import.meta.env.SENTRY_URL;
-
-  if (sentryAuthToken && sentryOrg && sentryProject && sentryUrl) {
-    vitePlugins.push(
-      sentryVitePlugin({
-        authToken: sentryAuthToken,
-        org: sentryOrg,
-        project: sentryProject,
-        url: sentryUrl,
-      }),
-    );
-  }
-}
 
 const routeRules = {
   // Cache
@@ -70,11 +52,6 @@ export default defineNuxtConfig({
     serverUrl,
     public: {
       clientUrl,
-      gtmID: import.meta.env.GTM_ID,
-      sentry: {
-        dsn: import.meta.env.SENTRY_DSN,
-        environment: import.meta.env.SENTRY_ENVIRONMENT,
-      },
     },
   },
   app: {
@@ -104,11 +81,14 @@ export default defineNuxtConfig({
   },
   sourcemap: true,
   routeRules,
-  modules: ['@pinia/nuxt', // '@nuxtjs/i18n',
-  // '@nuxtjs/device',
-  '@nuxtjs/robots', // '@nuxt/image',
-  'nuxt-svgo', // 'nuxt-delay-hydration',
-  '@vueuse/nuxt', '@vee-validate/nuxt', '@nuxthub/core'],
+  modules: [
+    '@pinia/nuxt', // '@nuxtjs/i18n',
+    // '@nuxtjs/device',
+    '@nuxtjs/robots', // '@nuxt/image',
+    'nuxt-svgo', // 'nuxt-delay-hydration',
+    '@vueuse/nuxt',
+    '@vee-validate/nuxt',
+  ],
   // i18n: {
   //   locales: [{ code: 'en', file: 'en.json' }],
   //   defaultLocale: 'en',
