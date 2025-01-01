@@ -34,4 +34,4 @@ jobs:
         uses: nuxt-hub/action@v1
         id: deploy
         with:
-          project-key: organick-jkjf
+          project-key: organick-pnb7
