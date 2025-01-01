@@ -19,6 +19,7 @@ defineProps({
       class="card-offer-simple__image"
       width="335"
       height="314"
+      loading="lazy"
     />
 
     <h4 class="card-offer-simple__title">
