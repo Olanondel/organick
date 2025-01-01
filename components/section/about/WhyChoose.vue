@@ -1,4 +1,27 @@
-<script setup></script>
+<script setup>
+const benefits = [
+  {
+    title: 'Return Policy',
+    text: 'Simply dummy text of the printintypesetting industry.',
+    icon: '/icons/about-us/policy.svg',
+  },
+  {
+    title: '100% Fresh',
+    text: 'Simply dummy text of the printintypesetting industry.',
+    icon: '/icons/about-us/fresh.svg',
+  },
+  {
+    title: 'Support 24/7',
+    text: 'Simply dummy text of the printintypesetting industry.',
+    icon: '/icons/about-us/support.svg',
+  },
+  {
+    title: 'Secured Payment',
+    text: 'Simply dummy text of the printintypesetting industry.',
+    icon: '/icons/about-us/payment.svg',
+  },
+];
+</script>
 
 <template>
   <section class="section-why-choose">
@@ -79,7 +102,14 @@
         />
       </div>
 
-      <div class="section-why-choose__cards"></div>
+      <div class="section-why-choose__cards">
+        <CardBenefit
+          v-for="(item, index) in benefits"
+          :key="index"
+          class="section-why-choose__card"
+          v-bind="item"
+        />
+      </div>
     </div>
   </section>
 </template>
@@ -93,6 +123,7 @@
     display: flex;
     align-items: center;
     gap: em(51);
+    margin-bottom: em(91);
   }
 
   &__about {
@@ -170,6 +201,10 @@
   }
 
   &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: em(30);
+    padding: 0 em(141);
   }
 }
 </style>
