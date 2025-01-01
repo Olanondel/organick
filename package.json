@@ -27,7 +27,6 @@
     "@nuxtjs/device": "^3.2.2",
     "@nuxtjs/i18n": "^8.5.3",
     "@nuxtjs/robots": "^3.0.0",
-    "@sentry/vue": "^8.30.0",
     "@vee-validate/yup": "^4.13.2",
     "@vueuse/components": "^11.0.3",
     "@vueuse/core": "^11.0.3",
