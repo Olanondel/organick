@@ -18,11 +18,11 @@ const data = computed(() => {
     />
 
     <div class="layout-page-header__content">
-      <div class="layout-page-header__title">
+      <h1 class="layout-page-header__title">
         <span class="layout-page-header__font layout-page-header__font--title">
           {{ data.title }}
         </span>
-      </div>
+      </h1>
     </div>
   </div>
 </template>

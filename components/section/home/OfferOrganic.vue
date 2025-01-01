@@ -4,7 +4,7 @@ import { products } from '@/configs/products';
 
 <template>
   <div class="section-offer-organic">
-    <div class="container container--md--right">
+    <div class="container container--md">
       <div class="section-offer-organic__head">
         <PartsHead
           subtitle="Offer"
@@ -34,7 +34,7 @@ import { products } from '@/configs/products';
   &__head {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-end;
     margin-bottom: em(50);
   }
 

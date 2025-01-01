@@ -14,10 +14,13 @@ definePageMeta({
     <SectionAboutWhyChoose />
 
     <SectionAboutExperts />
+
+    <SectionAboutOffer />
   </section>
 </template>
 
 <style scoped lang="scss">
 .pages-about {
+  padding-bottom: em(141);
 }
 </style>
