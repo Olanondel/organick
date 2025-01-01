@@ -1,23 +1,18 @@
 <script setup>
 import { experts } from '@/configs/experts';
-
-definePageMeta({
-  pageHeader: {
-    title: 'Our Team',
-    image: '/images/page-header/team/team.jpg',
-  },
-});
 </script>
 
 <template>
-  <section class="pages-experts">
+  <div class="section-experts">
     <div class="container container--md">
-      <div class="pages-experts__content">
-        <div class="pages-experts__header">
+      <div class="section-experts__content">
+        <div class="section-experts__header">
           <PartsHead subtitle="Team" title="Our Organic Experts" />
 
-          <p class="pages-experts__description">
-            <span class="pages-experts__font pages-experts__font--description">
+          <p class="section-experts__description">
+            <span
+              class="section-experts__font section-experts__font--description"
+            >
               Simply dummy text of the printing and typesetting industry. Lorem
               had ceased to been the industry's standard dummy text ever since
               the 1500s, when an unknown printer took a galley.
@@ -25,23 +20,23 @@ definePageMeta({
           </p>
         </div>
 
-        <ul class="pages-experts__cards">
+        <ul class="section-experts__cards">
           <li
-            v-for="(item, index) in experts"
+            v-for="(item, index) in experts.slice(0, 3)"
             :key="index"
-            class="pages-experts__item pages-experts__item--card"
+            class="section-experts__item section-experts__item--card"
           >
-            <CardExpert class="pages-experts__card" v-bind="item" />
+            <CardExpert class="section-experts__card" v-bind="item" />
           </li>
         </ul>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <style scoped lang="scss">
-.pages-experts {
-  padding: em(150) 0 em(120);
+.section-experts {
+  padding: em(177) 0 em(202);
 
   &__header {
     text-align: center;

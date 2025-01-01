@@ -12,6 +12,8 @@ definePageMeta({
     <SectionAbout />
 
     <SectionAboutWhyChoose />
+
+    <SectionAboutExperts />
   </section>
 </template>
 
