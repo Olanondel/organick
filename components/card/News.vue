@@ -60,7 +60,7 @@ defineProps({
         </span>
       </p>
 
-      <UiButton theme="yellow" has-icon>Read More</UiButton>
+      <UiButton to="/news" theme="yellow" has-icon>Read More</UiButton>
     </div>
   </div>
 </template>

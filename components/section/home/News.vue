@@ -28,7 +28,7 @@ const news = [
           class="section-news__head"
         />
 
-        <UiButton has-icon theme="transparent">More News</UiButton>
+        <UiButton to="/news" has-icon theme="transparent">More News</UiButton>
       </div>
 
       <div class="section-news__cards">

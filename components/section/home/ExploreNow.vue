@@ -1,4 +1,10 @@
-<script setup></script>
+<script setup>
+const handleButtonClick = () => {
+  const targetElement = document.querySelector('.section-products');
+
+  targetElement.scrollIntoView({ behavior: 'smooth' });
+};
+</script>
 
 <template>
   <div class="section-explore-now">
@@ -60,7 +66,9 @@
           </span>
         </h2>
 
-        <UiButton theme="yellow">Explore Now</UiButton>
+        <UiButton theme="yellow" @click="handleButtonClick"
+          >Explore Now</UiButton
+        >
       </div>
     </div>
   </div>

@@ -65,7 +65,7 @@
           </li>
         </ul>
 
-        <UiButton has-icon class="sections-about__button">
+        <UiButton to="/" has-icon class="sections-about__button">
           Explore More
         </UiButton>
       </div>

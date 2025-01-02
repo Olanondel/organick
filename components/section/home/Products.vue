@@ -35,6 +35,9 @@ import { products } from '@/configs/products';
 .section-products {
   padding: em(176) 0 em(200);
 
+  // TODO fix
+  scroll-margin-top: em(-150);
+
   &__head {
     text-align: center;
     margin-bottom: em(40);

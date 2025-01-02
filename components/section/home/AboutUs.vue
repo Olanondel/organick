@@ -82,7 +82,7 @@
           </li>
         </ul>
 
-        <UiButton has-icon>Shop Now</UiButton>
+        <UiButton to="/shop" has-icon>Shop Now</UiButton>
       </div>
     </div>
   </div>

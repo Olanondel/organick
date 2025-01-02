@@ -12,7 +12,7 @@ import { products } from '@/configs/products';
           theme="white"
         />
 
-        <UiButton theme="yellow" has-icon>View All Product</UiButton>
+        <UiButton to="/shop" theme="yellow" has-icon>View All Product</UiButton>
       </div>
 
       <div class="section-offer-organic__cards">
