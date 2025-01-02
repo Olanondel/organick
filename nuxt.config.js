@@ -56,12 +56,32 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'Nuxt 3 Boilerplate',
+      title: 'Organick | 100% Natural Food!',
       viewport: 'width=device-width, initial-scale=1, maximum-scale=5',
       htmlAttrs: { lang: 'en' },
       // meta: [{ name: 'theme-color', content: '#FFFFFF' }],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        {
+          rel: 'icon',
+          type: 'image/png',
+          href: '/favicon/favicon-96x96.png',
+          sizes: '96x96',
+        },
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon/favicon.svg' },
+        {
+          rel: 'icon',
+          type: 'image/x-icon',
+          href: '/favicon/favicon.ico',
+        },
+        {
+          rel: 'apple-touch-icon',
+          href: '/favicon/apple-touch-icon.png',
+          sizes: '180x180',
+        },
+        {
+          rel: 'manifest',
+          href: '/favicon/site.webmanifest',
+        },
         // ...fontsToPreload,
       ],
     },
